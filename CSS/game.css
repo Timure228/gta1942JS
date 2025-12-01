@@ -1,0 +1,35 @@
+html {
+    cursor: url("/cursor_img/aim_default.png"), auto;
+} 
+
+body {
+    background-color: green; 
+}
+
+.player {
+    position: absolute;
+    transition: 0.1s linear;
+}
+
+body:focus {
+    scale: (2);
+}
+
+.fields {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.field {
+    height: 150px;
+    width: 400px;
+    border: 2px solid black;
+    background-color: yellow;
+}
+
+.tree1 {
+    height: 80px
+}
