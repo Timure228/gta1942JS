@@ -130,6 +130,7 @@ const shoot = (e) => {
     }
 }
 
+
 player.setAttribute("tabindex", "0");
 player.addEventListener("keydown", (e) => walk(e));
 // Activate walking_animation()

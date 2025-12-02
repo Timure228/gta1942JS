@@ -1,5 +1,14 @@
 export default class Sprite {
-    constructor(class_name, x_left, y_top, width, height, src_, rotation) {
+    constructor(class_name, 
+        x_left, 
+        y_top, 
+        width, 
+        height, 
+        src_, 
+        rotation, 
+        isanim, 
+        n_frames, 
+        anim_path) {
         this.class_name = class_name;
         this.x_left = x_left;
         this.y_top = y_top;
@@ -7,6 +16,9 @@ export default class Sprite {
         this.width = width;
         this.src_ = src_;
         this.rotation = rotation;
+        this.isanim = isanim;
+        this.n_frames = n_frames;
+        this.anim_path = anim_path;
     }
 
     add_sprite() {
@@ -25,7 +37,20 @@ export default class Sprite {
         sprite_img.style.height = this.height;
         document.body.append(sprite_img)
     }
-}
+    
+    play_anim() {
+        let frame = 1;
+        const interval = setInterval(() => {
+            const img = document.querySelector("." + this.class_name)
+            img.src = `${this.anim_path}${frame}.png`;
+            frame++;
+            if (frame > this.n_frames) {
+                console.log("dlkj")
+                frame = 1
+            }
+        }, 150);
+    }    
+}   
 
 
 export function check_collision_player(sprites) {
@@ -43,7 +68,7 @@ export function check_collision_player(sprites) {
 
         if ((player_x > x_left && player_x < length) && (player_y > y_top && player_y < height)) {
             console.log("touched")
-            if (player_x + 10> length) {
+            if (player_x + 10 > length) {
                 console.log("touched right")
                 player.style.left = (player.x + 3) + "px"
             }
@@ -67,25 +92,23 @@ export function bullet_collision(sprites) {
     let bullet = document.querySelector(".bullet")
     try {
         let bullet_rect = bullet.getBoundingClientRect()
-     
     
-    console.log(bullet_rect.x)
     sprites.forEach(sprite => { 
         let bullet_x = parseInt(bullet_rect.x)
         let bullet_y = parseInt(bullet_rect.y)
         let x_left = sprite.x_left
         let y_top = sprite.y_top
-        let length = x_left + sprite.width
-        let height = y_top + sprite.height
-        console.log(bullet_x)
+        let length = x_left + sprite.width + 30
+        let height = y_top + sprite.height - 35
+        console.log(y_top)
         if ((bullet_x > x_left && bullet_x < length) && (bullet_y > y_top && bullet_y < height)) {
             console.log("yes")
             bullet.remove()
             
             let explosive_img = document.createElement("img")
             explosive_img.style.position = "absolute"
-            explosive_img.style.left = parseInt(bullet_x) + "px"
-            explosive_img.style.top = parseInt(bullet_y) + "px"
+            explosive_img.style.left = parseInt(bullet_x - 50) + "px"
+            explosive_img.style.top = parseInt(bullet_y - 50) + "px"
             explosive_img.style.width = "86px"
             explosive_img.src = "/bullet_anim/1.png"
             document.body.append(explosive_img)

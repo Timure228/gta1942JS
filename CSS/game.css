@@ -9,6 +9,7 @@ body {
 .player {
     position: absolute;
     transition: 0.1s linear;
+    outline: none;
 }
 
 body:focus {
@@ -32,4 +33,16 @@ body:focus {
 
 .tree1 {
     height: 80px
+}
+
+.tree3 {
+    height: 90px;
+}
+
+.tree4 {
+    height: 100px;
+}
+
+.tree5 {
+    height: 150px;
 }
