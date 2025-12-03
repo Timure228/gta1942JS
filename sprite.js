@@ -8,7 +8,8 @@ export default class Sprite {
         rotation, 
         isanim, 
         n_frames, 
-        anim_path) {
+        anim_path,
+        color) {
         this.class_name = class_name;
         this.x_left = x_left;
         this.y_top = y_top;
@@ -19,6 +20,7 @@ export default class Sprite {
         this.isanim = isanim;
         this.n_frames = n_frames;
         this.anim_path = anim_path;
+        this.color = color;
     }
 
     add_sprite() {
@@ -34,7 +36,10 @@ export default class Sprite {
         sprite_img.style.left = this.x_left + "px"
         sprite_img.style.top = this.y_top + "px"
         sprite_img.style.width = this.width + "px";
-        sprite_img.style.height = this.height;
+        sprite_img.style.height = this.height + "px";
+        if (this.color) {
+            sprite_img.style.background = this.color
+        }
         document.body.append(sprite_img)
     }
     
@@ -49,7 +54,12 @@ export default class Sprite {
                 frame = 1
             }
         }, 150);
-    }    
+    }  
+    
+    make_transparent() {
+        const img = document.querySelector("." + this.class_name)
+        img.style.opacity = "0"
+    }
 }   
 
 
@@ -100,9 +110,7 @@ export function bullet_collision(sprites) {
         let y_top = sprite.y_top
         let length = x_left + sprite.width + 30
         let height = y_top + sprite.height - 35
-        console.log(y_top)
         if ((bullet_x > x_left && bullet_x < length) && (bullet_y > y_top && bullet_y < height)) {
-            console.log("yes")
             bullet.remove()
             
             let explosive_img = document.createElement("img")
