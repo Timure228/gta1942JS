@@ -2,7 +2,7 @@ export default class Dialog {
     constructor(name, text, txt_index) {
         this.name = name
         this.text = text
-        this.txt_index = 0
+        this.txt_index = -1
     }
 
     start_dialog(e) {
@@ -19,23 +19,23 @@ export default class Dialog {
             let i = 0
             setInterval(() => {
                 if (i < this.text.length) {
-                dialog_window.innerHTML += this.text.charAt(i);
-             i++;
-            }}, 50)}  
-
+                    dialog_window.innerHTML += this.text.charAt(i);
+                    i++;
+                }}, 50)}  
         
-        if (e != null) {
+        else if (e != null) {
             let j = 0
             if (e.key == "e" && this.txt_index+1 < this.text.length) {
                 setInterval(() => {
                     if (j < this.text[this.txt_index].length) {
-                    dialog_window.innerHTML += this.text[this.txt_index].charAt(j);
-                j++;
-                }}, 50)
+                        console.log(this.txt_index)
+                        dialog_window.innerHTML += this.text[this.txt_index].charAt(j);
+                        j++;
+                    }}, 80)
                 this.txt_index++
             }  
             else {
-                dialog_window.remove()
+                document.querySelectorAll(".dialog_window").forEach(tag => tag.remove())
             }
                 
             
