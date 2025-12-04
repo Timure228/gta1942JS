@@ -46,9 +46,9 @@ tree8.add_sprite()
 const bush1 = new Sprite("bush1", 380, 635, 130, null, "/sprite_images/bushes/bush1.png") // No col
 bush1.add_sprite()
 
-const monolog = new Dialog("monolog", "Fucking assholes...")
-monolog.start_dialog()
+const monolog = new Dialog("monolog", ["Fucking assholes...", "Obama...", "baby..."])
 
+monolog.start_dialog(null)
 
 player.addEventListener("keydown", () => check_collision_player([sea_s, grass, bottom_s]))
-
+document.body.addEventListener("keydown", (e) => monolog.start_dialog(e))

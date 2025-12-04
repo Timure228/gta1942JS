@@ -1,10 +1,11 @@
 export default class Dialog {
-    constructor(name, text) {
+    constructor(name, text, txt_index) {
         this.name = name
         this.text = text
+        this.txt_index = 0
     }
 
-    start_dialog() {
+    start_dialog(e) {
         let dialog_window = document.createElement("span")
         dialog_window.classList.add("dialog_window")
         dialog_window.style.position = "absolute"
@@ -12,28 +13,34 @@ export default class Dialog {
         dialog_window.style.top = "600px"
         dialog_window.style.width = "700px";
         dialog_window.style.height = "100px";
- 
-
-
         document.body.append(dialog_window)
 
-        let speed = 120
-        let i = 0
-        setInterval(() => {
-            if (i < this.text.length) {
-            dialog_window.innerHTML += this.text.charAt(i);
-            i++;
-            
-            if (i == this.text.length) {
-                let j = 0
-                setInterval(() => {
-                    if (j < " Press E".length) {
-                    dialog_window.innerHTML += " Press E".charAt(j);
-                    j++;
-            }}, 50)}
-        }}, speed)   
-        
-           
-    }
+        if (!Array.isArray(this.text)) {
+            let i = 0
+            setInterval(() => {
+                if (i < this.text.length) {
+                dialog_window.innerHTML += this.text.charAt(i);
+             i++;
+            }}, 50)}  
 
+        
+        if (e != null) {
+            let j = 0
+            if (e.key == "e" && this.txt_index+1 < this.text.length) {
+                setInterval(() => {
+                    if (j < this.text[this.txt_index].length) {
+                    dialog_window.innerHTML += this.text[this.txt_index].charAt(j);
+                j++;
+                }}, 50)
+                this.txt_index++
+            }  
+            else {
+                dialog_window.remove()
+            }
+                
+            
+        }
+
+        
+    } 
 }
