@@ -21,7 +21,7 @@ export default class Dialog {
                 if (i < this.text.length) {
                     dialog_window.innerHTML += this.text.charAt(i);
                     i++;
-                }}, 50)}  
+                }}, 60)}  
         
         else if (e != null) {
             let j = 0
@@ -31,7 +31,7 @@ export default class Dialog {
                         console.log(this.txt_index)
                         dialog_window.innerHTML += this.text[this.txt_index].charAt(j);
                         j++;
-                    }}, 80)
+                    }}, 60)
                 this.txt_index++
             }  
             else {

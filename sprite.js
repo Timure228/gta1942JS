@@ -9,7 +9,8 @@ export default class Sprite {
         isanim, 
         n_frames, 
         anim_path,
-        color) {
+        color,
+        trigger_link) {
         this.class_name = class_name;
         this.x_left = x_left;
         this.y_top = y_top;
@@ -21,6 +22,7 @@ export default class Sprite {
         this.n_frames = n_frames;
         this.anim_path = anim_path;
         this.color = color;
+        this.trigger_link = trigger_link
     }
 
     add_sprite() {
@@ -60,10 +62,14 @@ export default class Sprite {
         const img = document.querySelector("." + this.class_name)
         img.style.opacity = "0"
     }
+
+    add_trigger_link() {
+        
+    }
 }   
 
 
-export function check_collision_player(sprites) {
+export function check_collision_player(sprites, is_trigger=false) {
     // Player Collision
     sprites.forEach(sprite => {
         let x_left = sprite.x_left - 25
@@ -81,23 +87,36 @@ export function check_collision_player(sprites) {
             if (player_x + 10 > length) {
                 console.log("touched right")
                 player.style.left = (player.x + 3) + "px"
+                if (is_trigger) {
+                    window.location.href = sprite.trigger_link
+                }
             }
             else if (player_x - 10 < x_left) {
                 console.log("touched left")
                 player.style.left = (player.x - 3) + "px"
+                if (is_trigger) {
+                    window.location.href = sprite.trigger_link
+                }
             }
             else if (player_y - 10 < y_top) {
                 console.log("touched top")
                 player.style.top = (player.y - 3) + "px"
+                if (is_trigger) {
+                    window.location.href = sprite.trigger_link
+                }
             }
             else if (player_y + 10 > height) {
                 console.log("touched bottom")
                 player.style.top = (player.y + 3) + "px"
+                if (is_trigger) {
+                    window.location.href = sprite.trigger_link
+                }
             }
         }
     });
     
 }
+
 export function bullet_collision(sprites) {
     let bullet = document.querySelector(".bullet")
     try {

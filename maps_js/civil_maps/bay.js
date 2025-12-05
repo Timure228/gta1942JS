@@ -14,13 +14,13 @@ city_ambience.loop = true;
 city_ambience.play();
 
 
-// class_name, x_left, y_top, width, height, src_, rotation, isanim, n_frames, anim_path, color
+// class_name, x_left, y_top, width, height, src_, rotation, isanim, n_frames, anim_path, color, trigger_link
 const sea_s = new Sprite("skeleton", 0, 340, 1600, 200)
 sea_s.add_sprite()
 sea_s.make_transparent()
 
 
-const grass = new Sprite("grass", 0, 647, 1700, 100, null, null, null, null, null, "#084724")
+const grass = new Sprite("grass", 0, 647, 1600, 100, "/maps/map_img/grass_img.png")
 grass.add_sprite()
 
 const bottom_s = new Sprite("skeleton1", 0, 563, 1700, 100)
@@ -46,7 +46,21 @@ tree8.add_sprite()
 const bush1 = new Sprite("bush1", 380, 635, 130, null, "/sprite_images/bushes/bush1.png") // No col
 bush1.add_sprite()
 
-const monolog = new Dialog("monolog", ["Fucking assholes...", "Obama...", "baby..."])
+const trigger = new Sprite("loc_trigger", 1550, 0, 170, 1700, null, null, null, null, null, "red",
+    "https://youtu.be/XltAtqE0xrk?si=TEM-92sKpXl4YMb7")
+trigger.add_sprite()
 
-player.addEventListener("keydown", () => check_collision_player([sea_s, grass, bottom_s]))
-document.body.addEventListener("keydown", (e) => monolog.start_dialog(e))
+const monolog = new Dialog("monolog", ["...", 
+    "Nice view...",
+    "...", 
+    "Can't sleep tonight...", 
+    "Maybe I have insomnia?",
+    "...",
+    "I don't even know...",
+    "This feeling...",
+    "However, I need to get home."])
+
+player.addEventListener("keydown", () => {check_collision_player([sea_s, grass, bottom_s])
+    check_collision_player([trigger], true) // true parameter is for trigger sprites
+})
+document.body.addEventListener("keydown", (e) => { if (e.key == "e") {monolog.start_dialog(e)}})

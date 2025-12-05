@@ -1,6 +1,6 @@
 import Sprite from "/sprite.js";
 import { check_collision_player, bullet_collision } from "/sprite.js";
-// class_name, x_left, y_top, width, height, src_, rotation, isanim, n_frames, anim_path, color
+// class_name, x_left, y_top, width, height, src_, rotation, isanim, n_frames, anim_path, color, trigger_link
 const field = new Sprite("field", 300, 200, 50, null)
 field.add_sprite()
 // Trees

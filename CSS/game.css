@@ -12,9 +12,7 @@ body {
 }
 
 .grass {
-  
     position: absolute;
-    background-color: goldenrod;
 }
 
 .player {
@@ -97,4 +95,10 @@ body:focus {
     letter-spacing: 5px; 
     font-family: textFont;
     text-indent: 15px;
+}
+
+loc_trigger {
+    height: 50px;
+    width: 50px;
+    background-color: blue;
 }
