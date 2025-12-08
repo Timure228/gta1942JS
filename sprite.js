@@ -59,8 +59,8 @@ export default class Sprite {
     }  
     
     make_transparent() {
-        const img = document.querySelector("." + this.class_name)
-        img.style.opacity = "0"
+        const img = document.querySelectorAll("." + this.class_name)
+        img.forEach((tag) => tag.style.opacity = 0)
     }
 
     add_trigger_link() {
@@ -154,4 +154,3 @@ export function bullet_collision(sprites) {
     catch (Uncaught) {}
 
 }
-

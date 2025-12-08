@@ -63,4 +63,3 @@ document.addEventListener("click", () => setInterval(() => bullet_collision([
     civil_car,
     house1_s
     ]), 16))
-

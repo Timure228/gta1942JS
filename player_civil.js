@@ -5,7 +5,7 @@ player.style.rotate = "0deg"
 let walking = false; // Prevent restarting for walking_animation()
 
 const walk = (e) => {
-    let speed = 5
+    let speed = 3.5
     let x_left = player.style.left
     let y_top = player.style.top
     switch (e.key){

@@ -46,8 +46,9 @@ tree8.add_sprite()
 const bush1 = new Sprite("bush1", 380, 635, 130, null, "/sprite_images/bushes/bush1.png") // No col
 bush1.add_sprite()
 
+// Trigger to the next locatinon
 const trigger = new Sprite("loc_trigger", 1550, 0, 170, 1700, null, null, null, null, null, "red",
-    "https://youtu.be/XltAtqE0xrk?si=TEM-92sKpXl4YMb7")
+    "http://127.0.0.1:3000/maps/civil_maps/city_suburbs.html")
 trigger.add_sprite()
 
 const monolog = new Dialog("monolog", ["...", 
