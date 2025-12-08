@@ -17,15 +17,15 @@ city_ambience.play();
 // class_name, x_left, y_top, width, height, src_, rotation, isanim, n_frames, anim_path, color, trigger_link
 const sea_s = new Sprite("skeleton", 0, 340, 1600, 200)
 sea_s.add_sprite()
-sea_s.make_transparent()
 
 
 const grass = new Sprite("grass", 0, 647, 1600, 100, "/maps/map_img/grass_img.png")
 grass.add_sprite()
 
-const bottom_s = new Sprite("skeleton1", 0, 563, 1700, 100)
+const bottom_s = new Sprite("skeleton", 0, 563, 1700, 100)
 bottom_s.add_sprite()
-bottom_s.make_transparent()
+sea_s.make_transparent()
+
 // Fucking forest
 const tree1 = new Sprite("tree1", 50, 410, 90, null, "/sprite_images/tree_images/tree1.png") // No col
 tree1.add_sprite()
