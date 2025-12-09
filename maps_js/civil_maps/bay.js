@@ -14,7 +14,7 @@ city_ambience.loop = true;
 city_ambience.play();
 
 
-// class_name, x_left, y_top, width, height, src_, rotation, isanim, n_frames, anim_path, color, trigger_link
+// class_name, x_left, y_top, width, height, src_, rotation, isanim, n_frames, anim_path, anim_speed, color, trigger_link
 const sea_s = new Sprite("skeleton", 0, 340, 1600, 200)
 sea_s.add_sprite()
 
@@ -47,11 +47,12 @@ const bush1 = new Sprite("bush1", 380, 635, 130, null, "/sprite_images/bushes/bu
 bush1.add_sprite()
 
 // Trigger to the next locatinon
-const trigger = new Sprite("loc_trigger", 1550, 0, 170, 1700, null, null, null, null, null, "red",
+const trigger = new Sprite("loc_trigger", 1550, 0, 170, 1700, null, null, null, null, null, null, "red",
     "http://127.0.0.1:3000/maps/civil_maps/city_suburbs.html")
 trigger.add_sprite()
 
-const monolog = new Dialog("monolog", ["...", 
+const monolog = new Dialog("monolog", [
+    "...", 
     "Nice view...",
     "...", 
     "Can't sleep tonight...", 

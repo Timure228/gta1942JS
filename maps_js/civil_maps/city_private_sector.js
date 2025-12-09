@@ -29,11 +29,11 @@ const barrier5 = new Sprite("skeleton", 1320, 120, 400, 340)
 barrier5.add_sprite()
 
 
-const barrier6 = new Sprite("skeleton", 0, 120, 320, 310)
+const barrier6 = new Sprite("skeleton", 0, 120, 260, 310)
 barrier6.add_sprite()
 
 // Trigger to the next locatinon
-const trigger = new Sprite("loc_trigger", 1550, 0, 170, 1700, null, null, null, null, null, "red",
+const trigger = new Sprite("loc_trigger", 1550, 0, 170, 1700, null, null, null, null, null, null, "red",
     "http://127.0.0.1:3000/maps/civil_maps/city_suburbs.html")
 trigger.add_sprite()
 

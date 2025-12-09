@@ -9,6 +9,7 @@ export default class Sprite {
         isanim, 
         n_frames, 
         anim_path,
+        anim_speed,
         color,
         trigger_link) {
         this.class_name = class_name;
@@ -21,6 +22,7 @@ export default class Sprite {
         this.isanim = isanim;
         this.n_frames = n_frames;
         this.anim_path = anim_path;
+        this.anim_speed = anim_speed
         this.color = color;
         this.trigger_link = trigger_link
     }
@@ -47,7 +49,7 @@ export default class Sprite {
     
     play_anim() {
         let frame = 1;
-        const interval = setInterval(() => {
+        setInterval(() => {
             const img = document.querySelector("." + this.class_name)
             img.src = `${this.anim_path}${frame}.png`;
             frame++;
@@ -55,16 +57,12 @@ export default class Sprite {
                 console.log("dlkj")
                 frame = 1
             }
-        }, 150);
+        }, this.anim_speed);
     }  
     
     make_transparent() {
         const img = document.querySelectorAll("." + this.class_name)
         img.forEach((tag) => tag.style.opacity = 0)
-    }
-
-    add_trigger_link() {
-        
     }
 }   
 
