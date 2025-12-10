@@ -80,8 +80,6 @@ const smoke_tube3 = new Sprite( // no col
 smoke_tube3.add_sprite()
 smoke_tube3.play_anim()
 
-let character_icon = "/dialog_faces/player_face_civil.png"
-
 const barrier1 = new Sprite("skeleton", 0, 340, 1700, 170)
 barrier1.add_sprite()
 
@@ -94,11 +92,11 @@ barrier3.add_sprite()
 const barrier4 = new Sprite("skeleton", 920, 690, 800, 45)
 barrier4.add_sprite()
 
-
 const barrier5 = new Sprite("skeleton", -95, 0, 80, 1700)
 barrier5.add_sprite()
 barrier1.make_transparent()
 
+let character_icon = "/dialog_faces/player_face_civil.png"
 const monolog = new Dialog("monolog", [
     ["[coughs]", character_icon],
     ["Can't even breath here.", character_icon], 
@@ -107,7 +105,7 @@ const monolog = new Dialog("monolog", [
     ])
 
 const trigger = new Sprite("loc_trigger", 1140, 600, 50, 40, null, null, null, null, null,null, "green",
-    "https://www.youtube.com/watch?v=7dtiSR-IMus")
+    "http://127.0.0.1:3000/maps/civil_maps/apartment.html")
 trigger.add_sprite()
 // trigger.make_transparent()
 

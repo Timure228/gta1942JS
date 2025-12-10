@@ -103,3 +103,14 @@ loc_trigger {
     width: 50px;
     background-color: blue;
 }
+
+.tv {
+    position: absolute;
+    top: 150px;
+    left: 645px;
+    width: 385px; 
+    height: 110px;
+    border-radius: 2%;
+    object-fit: cover;
+    rotate: 0.13deg;
+}

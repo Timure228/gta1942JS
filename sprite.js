@@ -11,7 +11,8 @@ export default class Sprite {
         anim_path,
         anim_speed,
         color,
-        trigger_link) {
+        trigger_link) 
+        {
         this.class_name = class_name;
         this.x_left = x_left;
         this.y_top = y_top;
@@ -39,8 +40,8 @@ export default class Sprite {
         sprite_img.style.position = "absolute"
         sprite_img.style.left = this.x_left + "px"
         sprite_img.style.top = this.y_top + "px"
-        sprite_img.style.width = this.width + "px";
-        sprite_img.style.height = this.height + "px";
+        sprite_img.style.width = this.width + "px"
+        sprite_img.style.height = this.height + "px"
         if (this.color) {
             sprite_img.style.background = this.color
         }
@@ -67,7 +68,12 @@ export default class Sprite {
 }   
 
 
-export function check_collision_player(sprites, is_trigger=false) {
+export function check_collision_player(sprites, is_trigger=false, is_object=false) {
+    let press_tip = document.createElement("img")
+    press_tip.src = "/tip_images/T_key.png"
+    press_tip.style.width = "40px"
+    press_tip.style.position = "absolute"
+    press_tip.classList.add("key_tip")
     // Player Collision
     sprites.forEach(sprite => {
         let x_left = sprite.x_left - 25
@@ -79,36 +85,51 @@ export function check_collision_player(sprites, is_trigger=false) {
         let player_x = player.x
         let player_y = player.y
 
-
+        if (is_object) {
+        press_tip.style.left = (sprite.x_left + 35) + "px"
+        press_tip.style.top = (sprite.y_top - 40) + "px"
+        }
         if ((player_x > x_left && player_x < length) && (player_y > y_top && player_y < height)) {
             console.log("touched")
             if (player_x + 10 > length) {
                 console.log("touched right")
-                player.style.left = (player.x + 3) + "px"
                 if (is_trigger) {
                     window.location.href = sprite.trigger_link
                 }
+                else if (is_object) {
+                    console.log("ne pernula a puknul")
+                    document.body.append(press_tip)
+                } else {player.style.left = (player.x + 3) + "px"}
             }
             else if (player_x - 10 < x_left) {
                 console.log("touched left")
-                player.style.left = (player.x - 3) + "px"
                 if (is_trigger) {
                     window.location.href = sprite.trigger_link
                 }
+                else if (is_object) {
+                    console.log("ne pernula a puknul")
+                    document.body.append(press_tip)
+                } else {player.style.left = (player.x - 3) + "px"}
             }
             else if (player_y - 10 < y_top) {
                 console.log("touched top")
-                player.style.top = (player.y - 3) + "px"
                 if (is_trigger) {
                     window.location.href = sprite.trigger_link
                 }
+                else if (is_object) {
+                    console.log("ne pernula a puknul")
+                    document.body.append(press_tip)
+                } else {player.style.top = (player.y - 3) + "px"}
             }
             else if (player_y + 10 > height) {
                 console.log("touched bottom")
-                player.style.top = (player.y + 3) + "px"
                 if (is_trigger) {
                     window.location.href = sprite.trigger_link
                 }
+                else if (is_object) {
+                    console.log("ne pernula a puknul")
+                    document.body.append(press_tip)
+                } else {player.style.top = (player.y + 3) + "px"}
             }
         }
     });
