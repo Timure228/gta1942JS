@@ -15,6 +15,13 @@ export default class Dialog {
         dialog_window.style.height = "100px";
         document.body.append(dialog_window)
 
+        let dialog_icon = document.createElement("img")
+        dialog_icon.classList.add("dialog_icon")
+        dialog_icon.style.position = "absolute"
+        dialog_icon.style.top = "580px"
+        dialog_icon.style.left = "690px"
+        dialog_icon.style.width = "110px"
+
         if (!Array.isArray(this.text)) {
             let i = 0
             setInterval(() => {
@@ -24,23 +31,26 @@ export default class Dialog {
                 }}, 60)}  
         
         else if (e != null) {
+            
             let j = 0
             if (e.key == "e" && this.txt_index+1 < this.text.length) {
+                document.body.append(dialog_icon)
                 setInterval(() => {
-                    if (j < this.text[this.txt_index].length) {
+                    // Add icon
+                    dialog_icon.src = this.text[this.txt_index][1]                    
+                    // Add text
+                    if (j < this.text[this.txt_index][0].length) {
                         console.log(this.txt_index)
-                        dialog_window.innerHTML += this.text[this.txt_index].charAt(j);
+                        dialog_window.innerHTML += this.text[this.txt_index][0].charAt(j);
                         j++;
                     }}, 60)
                 this.txt_index++
+                
             }  
             else {
+                document.querySelectorAll(".dialog_icon").forEach(tag => tag.remove())
                 document.querySelectorAll(".dialog_window").forEach(tag => tag.remove())
-            }
-                
-            
+            }                
         }
-
-        
-    } 
+    }
 }
