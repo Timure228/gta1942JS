@@ -10,7 +10,7 @@ player.style.rotate = 0 + "deg"
 
 
 // Ambience Audio
-var city_ambience = new Audio("/maps/ambience_sounds/city_ambience.wav");
+var city_ambience = new Audio("/maps/ambience_sounds/city_ambience2.mp3");
 city_ambience.volume = 0.45;
 city_ambience.loop = true;
 city_ambience.play();

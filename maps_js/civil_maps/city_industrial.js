@@ -1,5 +1,6 @@
 import Sprite from "/sprite.js";
 import Dialog from "/dialog.js";
+import Object from "/object.js";
 import { check_collision_player } from "/sprite.js";
 
 let player = document.querySelector(".player_civil")
@@ -104,12 +105,14 @@ const monolog = new Dialog("monolog", [
     ["I don't have enough money to live in the center.", character_icon],
     ])
 
-const trigger = new Sprite("loc_trigger", 1140, 600, 50, 40, null, null, null, null, null,null, "green",
-    "http://127.0.0.1:3000/maps/civil_maps/apartment.html")
-trigger.add_sprite()
-// trigger.make_transparent()
+const trigger = new Object(null, 1170, 590, 5, 50, "green")
+trigger.add_object()
+
 
 document.body.addEventListener("keydown", (e) => { if (e.key == "e") {monolog.start_dialog(e)}})
 player.addEventListener("keydown", () => {check_collision_player([barrier1, barrier2, barrier3, barrier4, barrier5])
-    check_collision_player([trigger], true) // true parameter is for trigger sprites
+    check_collision_player([trigger], false, true)
 })    
+document.body.addEventListener("keydown", (e) => { if (e.key == "t" && document.querySelector(".key_tip")) {
+    window.location.href = "http://127.0.0.1:3000/maps/civil_maps/apartment.html"
+}})

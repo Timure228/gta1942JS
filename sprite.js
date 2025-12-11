@@ -91,45 +91,36 @@ export function check_collision_player(sprites, is_trigger=false, is_object=fals
         }
         if ((player_x > x_left && player_x < length) && (player_y > y_top && player_y < height)) {
             console.log("touched")
+            if (is_object) {
+                document.body.append(press_tip)
+            }
             if (player_x + 10 > length) {
                 console.log("touched right")
                 if (is_trigger) {
                     window.location.href = sprite.trigger_link
                 }
-                else if (is_object) {
-                    console.log("ne pernula a puknul")
-                    document.body.append(press_tip)
-                } else {player.style.left = (player.x + 3) + "px"}
+                else {player.style.left = (player.x + 3) + "px"}
             }
             else if (player_x - 10 < x_left) {
                 console.log("touched left")
                 if (is_trigger) {
                     window.location.href = sprite.trigger_link
                 }
-                else if (is_object) {
-                    console.log("ne pernula a puknul")
-                    document.body.append(press_tip)
-                } else {player.style.left = (player.x - 3) + "px"}
+                else {player.style.left = (player.x - 3) + "px"}
             }
             else if (player_y - 10 < y_top) {
                 console.log("touched top")
                 if (is_trigger) {
                     window.location.href = sprite.trigger_link
                 }
-                else if (is_object) {
-                    console.log("ne pernula a puknul")
-                    document.body.append(press_tip)
-                } else {player.style.top = (player.y - 3) + "px"}
+                else {player.style.top = (player.y - 3) + "px"}
             }
             else if (player_y + 10 > height) {
                 console.log("touched bottom")
                 if (is_trigger) {
                     window.location.href = sprite.trigger_link
                 }
-                else if (is_object) {
-                    console.log("ne pernula a puknul")
-                    document.body.append(press_tip)
-                } else {player.style.top = (player.y + 3) + "px"}
+                else {player.style.top = (player.y + 3) + "px"}
             }
         }
     });

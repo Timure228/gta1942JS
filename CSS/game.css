@@ -106,11 +106,11 @@ loc_trigger {
 
 .tv {
     position: absolute;
-    top: 150px;
+    top: 149px;
     left: 645px;
     width: 385px; 
     height: 110px;
-    border-radius: 2%;
+    border-radius: 3%;
     object-fit: cover;
-    rotate: 0.13deg;
+    rotate: 0.2deg;
 }

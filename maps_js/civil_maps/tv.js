@@ -1,4 +1,3 @@
-
 import Dialog from "/dialog.js";
 
 let character_icon = "/dialog_faces/player_face_civil.png"
@@ -11,6 +10,6 @@ const monolog = new Dialog("monolog", [
 document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
     monolog.start_dialog(e)
     if (!document.querySelector(".dialog_window")) {
-        window.location.href = "hlksfdaj"
+        window.location.href = "http://127.0.0.1:3000/maps/civil_maps/apartment_awake.html"
     }}
 })

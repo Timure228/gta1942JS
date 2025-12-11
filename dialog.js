@@ -19,7 +19,7 @@ export default class Dialog {
         dialog_icon.classList.add("dialog_icon")
         dialog_icon.style.position = "absolute"
         dialog_icon.style.top = "580px"
-        dialog_icon.style.left = "690px"
+        dialog_icon.style.left = "680px"
         dialog_icon.style.width = "110px"
 
         if (!Array.isArray(this.text)) {

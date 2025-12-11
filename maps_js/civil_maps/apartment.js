@@ -13,7 +13,7 @@ var city_ambience = new Audio("/sfx/door_close.mp3");
 city_ambience.volume = 0.8;
 city_ambience.play();
 
-const barrier1 = new Sprite("skeleton", 0, 0, 230, 400)
+const barrier1 = new Sprite("skeleton", 0, 0, 190, 400)
 barrier1.add_sprite()
 
 const barrier2 = new Sprite("skeleton", 0, 420, 1800, 50)
@@ -36,9 +36,12 @@ barrier7.add_sprite()
 
 const barrier8 = new Sprite("skeleton", 350, 320, 1300, 200)
 barrier8.add_sprite()
+
+const barrier9 = new Sprite("skeleton", 0, 0, 50, 3000)
+barrier9.add_sprite()
 barrier1.make_transparent()
 
-const tv = new Object("tv", 900, 120, 170, 180, "green")
+const tv = new Object("tv", 1018, 150, 70, 105, "green")
 tv.add_object()
 
 
@@ -49,10 +52,10 @@ player.addEventListener("keydown", () => {check_collision_player([barrier1,
     barrier5, 
     barrier6, 
     barrier7,
-    barrier8])
+    barrier8,
+    barrier9])
     check_collision_player([tv], false, true)
 })    
-
 
 let character_icon = "/dialog_faces/player_face_civil.png"
 const monolog = new Dialog("monolog", [["Time to watch some TV.", character_icon]])

@@ -73,11 +73,10 @@ trigger.add_sprite()
 let character_icon = "/dialog_faces/player_face_civil.png"
 
 const monolog = new Dialog("monolog", [
-    ["...", character_icon], 
     ["Nice view...", character_icon],
     ["...", character_icon], 
     ["Can't sleep tonight...", character_icon], 
-    ["Maybe I have insomnia?", character_icon],
+    ["Maybe insomnia?", character_icon],
     ["...", character_icon],
     ["I don't even know...", character_icon],
     ["This feeling...", character_icon],
