@@ -59,7 +59,6 @@ player.addEventListener("keydown", () => {check_collision_player([barrier1,
 
 let character_icon = "/dialog_faces/player_face_civil.png"
 const monolog = new Dialog("monolog", [["Time to watch some TV.", character_icon]])
-monolog.start_dialog()
 
 document.body.addEventListener("keydown", (e) => { if (e.key == "e") {monolog.start_dialog(e)}})
 
