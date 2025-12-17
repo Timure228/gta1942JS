@@ -31,7 +31,6 @@ export default class Dialog {
                 }}, 60)}  
         
         else if (e != null) {
-            
             let j = 0
             if (e.key == "e" && this.txt_index+1 < this.text.length) {
                 document.body.append(dialog_icon)
@@ -40,12 +39,10 @@ export default class Dialog {
                     dialog_icon.src = this.text[this.txt_index][1]                    
                     // Add text
                     if (j < this.text[this.txt_index][0].length) {
-                        console.log(this.txt_index)
                         dialog_window.innerHTML += this.text[this.txt_index][0].charAt(j);
                         j++;
                     }}, 60)
                 this.txt_index++
-                
             }  
             else {
                 document.querySelectorAll(".dialog_icon").forEach(tag => tag.remove())

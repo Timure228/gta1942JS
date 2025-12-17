@@ -11,10 +11,11 @@ document.querySelectorAll("#menu_button").forEach(button => {
             }, 550);
         } else {
             setTimeout(() => {
-            window.location.href = "https://www.google.com/";
+            window.location.href = "https://www.youtube.com/watch?v=HfeervqhY9Y";
             }, 550);
         }
     
     })
 })
+
 

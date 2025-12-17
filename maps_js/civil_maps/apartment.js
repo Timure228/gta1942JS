@@ -41,7 +41,7 @@ const barrier9 = new Sprite("skeleton", 0, 0, 50, 3000)
 barrier9.add_sprite()
 barrier1.make_transparent()
 
-const tv = new Object("tv", 1018, 150, 70, 105, "green")
+const tv = new Object(null, 1018, 150, 70, 105, "green")
 tv.add_object()
 
 

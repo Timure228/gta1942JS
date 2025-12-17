@@ -1,7 +1,9 @@
 import Sprite from "/sprite.js";
 import Dialog from "/dialog.js";
 import { check_collision_player } from "/sprite.js";
+import { write_title } from "/map_title.js";
 
+write_title("Port Luna 2:00 press E")
 let player = document.querySelector(".player_civil")
 player.style.top = 520 + "px"
 player.style.left = 140 + "px"

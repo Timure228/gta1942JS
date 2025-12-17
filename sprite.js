@@ -74,6 +74,8 @@ export function check_collision_player(sprites, is_trigger=false, is_object=fals
     press_tip.style.width = "40px"
     press_tip.style.position = "absolute"
     press_tip.classList.add("key_tip")
+
+    
     // Player Collision
     sprites.forEach(sprite => {
         let x_left = sprite.x_left - 25
@@ -85,14 +87,18 @@ export function check_collision_player(sprites, is_trigger=false, is_object=fals
         let player_x = player.x
         let player_y = player.y
 
-        if (is_object) {
-        press_tip.style.left = (sprite.x_left + 35) + "px"
-        press_tip.style.top = (sprite.y_top - 40) + "px"
-        }
+       
         if ((player_x > x_left && player_x < length) && (player_y > y_top && player_y < height)) {
             console.log("touched")
-            if (is_object) {
-                document.body.append(press_tip)
+            if (is_object && !document.querySelector(".key_tip")) {
+                let key_tip = new Sprite("key_tip", (sprite.x_left + 35), (sprite.y_top - 40), 40, 40, "/tip_images/T_key1.png",
+            null,
+            true, 
+            2,
+            "/tip_images/T_key",
+            500)
+                key_tip.add_sprite()
+                key_tip.play_anim()
             }
             if (player_x + 10 > length) {
                 console.log("touched right")

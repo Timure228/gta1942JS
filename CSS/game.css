@@ -101,6 +101,18 @@ body:focus {
     padding-left: 12px; 
 }
 
+.choose_dialog_window {
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.8em;
+    line-height: 35px;
+    letter-spacing: 5px; 
+    font-family: textFont;
+    padding-left: 12px; 
+}
+
+
 loc_trigger {
     height: 50px;
     width: 50px;
