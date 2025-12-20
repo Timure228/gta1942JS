@@ -50,11 +50,11 @@ export default class TwoOptionChooseWindow extends Dialog {
             this.isTwo = true;
             this.isOne = false;
         }
-        else if (this.isOne && e.keyCode == 13) {
+        else if (this.isOne && e.keyCode == 13 && !document.querySelector(".dialog_window")) {
             choose_dialog_window.remove()
             return "one"
         }
-        else if (this.isTwo && e.keyCode == 13) {
+        else if (this.isTwo && e.keyCode == 13 && !document.querySelector(".dialog_window")) {
             choose_dialog_window.remove()
             return "two"
         }

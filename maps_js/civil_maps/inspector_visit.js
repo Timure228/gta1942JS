@@ -53,7 +53,6 @@ const dialog3 = new Dialog("dialog", [
 ])
 
 const choice1 = new TwoOptionChooseWindow("choose_window", ["Yes", "It's not your business"])
-const choice2 = new TwoOptionChooseWindow("choose_window", ["...", "Fuck off"])
 
 document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
     dialog.start_dialog(e)
@@ -62,16 +61,15 @@ document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
         choice1.start_dialog()
     }
 }})
-
+// After choosed some option in Choose Window 
 document.body.addEventListener("keydown", (e) => {
     const choice = choice1.choose(e);
-
     if (choice == "one") {
         dialog1.start_dialog(e)
         document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
             dialog1.start_dialog(e)
             if (!document.querySelector(".dialog_window")) {
-                alert("done")
+                window.location.href = "http://127.0.0.1:3000/maps/civil_maps/apartment_awake.html"
             }
     }})
 }
