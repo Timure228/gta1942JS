@@ -57,7 +57,7 @@ const choice1 = new TwoOptionChooseWindow("choose_window", ["Yes", "It's not you
 document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
     dialog.start_dialog(e)
     if (!document.querySelector(".dialog_window")) {
-        // window.location.href = "http://127.0.0.1:3000/maps/civil_maps/apartment_awake.html"
+        // window.location.href = "http://127.0.0.1:3000/maps/civil_maps/registration_point.html"
         choice1.start_dialog()
     }
 }})
@@ -69,7 +69,7 @@ document.body.addEventListener("keydown", (e) => {
         document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
             dialog1.start_dialog(e)
             if (!document.querySelector(".dialog_window")) {
-                window.location.href = "http://127.0.0.1:3000/maps/civil_maps/apartment_awake.html"
+                window.location.href = "http://127.0.0.1:3000/maps/civil_maps/registration_point.html"
             }
     }})
 }
@@ -78,7 +78,7 @@ document.body.addEventListener("keydown", (e) => {
         document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
             dialog2.start_dialog(e)
             if (!document.querySelector(".dialog_window")) {
-                alert("Two")
+                window.location.href = "http://127.0.0.1:3000/maps/civil_maps/registration_point.html"
             }
     }})
 }})

@@ -2,7 +2,7 @@ import Sprite from "/sprite.js";
 import Dialog from "/dialog.js";
 import Object from "/object.js";
 import { check_collision_player } from "/sprite.js";
-import { write_title } from "/map_title.js";
+import { write_title } from "/cutscene_tools.js";
 
 write_title("Industrial Zone 2:45 press E")
 
