@@ -48,16 +48,14 @@ const dialog2 = new Dialog("dialog", [
     ["You will recieve all instructions there. Here is your confirmation.", inspector_icon],
 ])
 
-const dialog3 = new Dialog("dialog", [
-    ["FUCK YOU.", inspector_icon]
-])
+
 
 const choice1 = new TwoOptionChooseWindow("choose_window", ["Yes", "It's not your business"])
 
-document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
+document.body.addEventListener("keydown", (e) => { 
+    if (e.key == "e") {
     dialog.start_dialog(e)
     if (!document.querySelector(".dialog_window")) {
-        // window.location.href = "http://127.0.0.1:3000/maps/civil_maps/registration_point.html"
         choice1.start_dialog()
     }
 }})

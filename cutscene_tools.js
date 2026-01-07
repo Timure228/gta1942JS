@@ -6,6 +6,7 @@ export function write_title(title) {
     h1.style.color = "white"
     h1.style.fontSize = "2.5em"
     h1.style.fontFamily = "textFont"
+    h1.style.zIndex = 4
 
     let j = 0
     const interval = setInterval(() => {
@@ -19,7 +20,7 @@ export function write_title(title) {
     document.body.append(h1)
 }
 
-export function scene_transition(delay) {
+export function scene_transition(delay, reverse=false) {
     let box = document.createElement("span")
     box.classList.add("scene_transition")
     box.style.position = "absolute"
@@ -28,11 +29,17 @@ export function scene_transition(delay) {
     box.style.backgroundColor = "black"
     box.style.height = "2000px"
     box.style.width = "2000px"
-    let j = 1;
+    box.style.zIndex = 4
+    reverse ? box.style.opacity = 0 : 1
+    let j;
+    reverse ? j = 0 : j = 1;
     setTimeout(() => {
         const interval = setInterval(() => {
+            console.log(j)
             box.style.opacity = j;
-            j -= 0.01;
+            if (reverse) {
+                j += 0.1
+            } else {j -= 0.05}
             if (j <= 0) {
                 clearInterval(interval);
             }
