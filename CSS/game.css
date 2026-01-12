@@ -17,6 +17,11 @@ body {
 
 .grass {
     position: absolute;
+    z-index: -2;
+}
+
+.train {
+    z-index: -1;
 }
 
 .player {
