@@ -59,19 +59,20 @@ function move_trees(tree_num) {
     })
 }
 
-
-for (let i = 2; i <= 125; i++) {
-    let width = 2000
-    let height = 810 
-    let grass = document.createElement("img")
-    grass.classList.add("grass")
-    grass.style.width = width + "px"       
-    grass.style.height = height + "px"
-    grass.src = "/maps/map_img/grass_img.png"
-    grass.style.position = "absolute"   
-    grass.style.left = ((i *400) + 1000) + "px"
-    grass.style.top = "0px"
-    document.body.append(grass)
+function create_ground() {
+    for (let i = 2; i <= 500; i++) {
+        let width = 2000
+        let height = 810 
+        let grass = document.createElement("img")
+        grass.classList.add("grass")
+        grass.style.width = width + "px"       
+        grass.style.height = height + "px"
+        grass.src = "/maps/map_img/grass_img.png"
+        grass.style.position = "absolute"   
+        grass.style.left = ((i *400) + 1000) + "px"
+        grass.style.top = "0px"
+        document.body.append(grass)
+    }
 }
 
 function move_ground() {
@@ -92,6 +93,7 @@ function move_ground() {
 }
 move_trees(1)
 move_trees(2)
+create_ground()
 move_ground()
 
 // scene_transition(2300)
@@ -137,6 +139,9 @@ const dialog = new Dialog("dialog", [
     ["You could say that.", rick_icon_laugh]
 ])
 dialog.start_dialog()
+document.body.addEventListener("keydown", (e) => { if (e.key == "e") {dialog.start_dialog(e)
+    if (!document.querySelector(".dialog_window")) {
+        window.location.href = "http://127.0.0.1:3000/maps/civil_maps/apartment_awake.html"
+    }}
+})
 
-
-document.body.addEventListener("keydown", (e) => { if (e.key == "e") {dialog.start_dialog(e)}})
