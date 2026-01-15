@@ -96,8 +96,8 @@ move_trees(2)
 create_ground()
 move_ground()
 
-// scene_transition(2300)
-// write_title("40 minutes after departure...")
+scene_transition(2300)
+write_title("40 minutes after departure...")
 
 let character_icon = "/dialog_faces/player_face_war.png"
 let rick_icon = "/dialog_faces/rick/rick.png"
@@ -138,6 +138,7 @@ const dialog = new Dialog("dialog", [
     ["I guess that experience helps out.", character_icon],
     ["You could say that.", rick_icon_laugh]
 ])
+
 dialog.start_dialog()
 document.body.addEventListener("keydown", (e) => { if (e.key == "e") {dialog.start_dialog(e)
     if (!document.querySelector(".dialog_window")) {

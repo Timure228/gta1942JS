@@ -137,7 +137,6 @@ export function bullet_collision(sprites) {
     let bullet = document.querySelector(".bullet")
     try {
         let bullet_rect = bullet.getBoundingClientRect()
-    
     sprites.forEach(sprite => { 
         let bullet_x = parseInt(bullet_rect.x)
         let bullet_y = parseInt(bullet_rect.y)
@@ -147,7 +146,6 @@ export function bullet_collision(sprites) {
         let height = y_top + sprite.height - 35
         if ((bullet_x > x_left && bullet_x < length) && (bullet_y > y_top && bullet_y < height)) {
             bullet.remove()
-            
             let explosive_img = document.createElement("img")
             explosive_img.style.position = "absolute"
             explosive_img.style.left = parseInt(bullet_x - 50) + "px"
@@ -168,5 +166,4 @@ export function bullet_collision(sprites) {
         }
     });}
     catch (Uncaught) {}
-
 }

@@ -40,7 +40,7 @@ function walking_animation() {
             player.src = "/player_img/player_go.png";
         }
         // Play Sound
-        var audio = new Audio('/walking_sounds/walk_grass.mp3');
+        var audio = new Audio('/walking_sounds/walk_snow.mp3');
         audio.play()
         audio.volume = 0.5
     }, 500);
@@ -108,8 +108,9 @@ const shoot = (e) => {
             player.src = "/player_img/player.png";
         }, 50);
         // Play Sound
-        var audio = new Audio('/weapon_sounds/shot.wav');
-        audio.play()
+        var shot = new Audio('/weapon_sounds/shot.wav');
+        shot.volume = 0.25;
+        shot.play()
         // Move bullet
         setTimeout(() => {
             let bullet_speed = 45;

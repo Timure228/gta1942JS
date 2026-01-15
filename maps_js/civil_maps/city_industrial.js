@@ -4,7 +4,7 @@ import Object from "/object.js";
 import { check_collision_player } from "/sprite.js";
 import { write_title } from "/cutscene_tools.js";
 
-write_title("Industrial Zone 2:45 press E")
+write_title("Industrial Zone 2:45 AM")
 
 let player = document.querySelector(".player_civil")
 player.style.top = 500 + "px"
