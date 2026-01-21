@@ -11,9 +11,21 @@
 <body class="city">
     <img src="/maps/map_img/snow_ground.jpg" style="position: relative; top: -8px; left: -8px;" width="1537" height="775"/>
     <img class="player" style="position: absolute;" src="/player_img/player.png" width="65"/>
-    <h1 class="aim_score">0</h1>
+    <img class="aim_pointer" src="/tip_images/arrow_up.png" style="position: absolute; width: 45px; left: 328px; top: 210px; "/>
     <video class="snow" autoplay loop>
         <source src="/videos/snow.webm" type="video/mp4">
     </video>
+    <h1 id="safeTimerDisplay" style="position: absolute; top: -10px; left: 30px; font-size: 5em; font-family: textFont;">00:0</h1>
+    <div id="score_div" style="display: None">
+        <span class="score_panel"></span>
+        <h1 id="score_text" style="top: 15px; left: 635px; font-size: 4em;">Results</h1>
+        <h1 id="score_text" style="top: 100px; left: 460px; font-size: 3.2em;"></h1>
+        <h1 id="score_text" style="top: 160px; left: 460px; font-size: 3.2em;"></h1>
+        <h1 id="score_text" style="top: 220px; left: 460px; font-size: 3.2em;"></h1>
+        <h1 id="score_text" style="top: 280px; left: 460px; font-size: 3.2em;"></h1>
+        <h1 id="score_text" style="top: 350px; left: 465px; font-size: 4.2em;">
+        Verdict: </h1>
+    </div>
+    <h1 id="score_text" class="hit_count" style="position: absolute; top: -20px; left: 1250px; font-size: 6em;">0/20</h1>
 </body>
 </html>

@@ -11,9 +11,8 @@ write_title("CLEAN THE FUCKING TOILET")
 document.body.style.cursor = 'url("/cursor_img/schwamm.png")'
 
 // Ambience Audio
-var city_ambience = new Audio("/maps/ambience_sounds/windstorm.mp3");
-city_ambience.volume = 0.6;
-city_ambience.loop = true;
+var city_ambience = new Audio("/sfx/toilet_flush.mp3");
+city_ambience.volume = 0.3;
 city_ambience.play();
 
 // generate dirt particles
@@ -37,6 +36,9 @@ for (let i=0; i < 150; i++) {
 
 document.onmouseover = function(e) {
     if (e.target.classList == "dirt") {
+        var remove_sound = new Audio("/sfx/pop.mp3")
+        remove_sound.volume = 0.4;
+        remove_sound.play()
         e.target.remove()
     }
 }
@@ -47,7 +49,7 @@ let instructor_scream_icon = "/dialog_faces/mil_instructor/instructor_screaming.
 const monolog = new Dialog("dialog", [
     ["But how will it help me to become a better fighter Sir?", character_icon],
     ["Shut your mouth Green Ass!!!", instructor_scream_icon],
-    ["MY ORDERS ARE NOT FOR DISCUSSION — ONLY EXECUTION!!!", instructor_scream_icon],
+    ["MY ORDERS ARE NOT FOR DISCUSSION - ONLY EXECUTION!!!", instructor_scream_icon],
     ["Now I want this toilet to be as clean as your browser history!!!", instructor_scream_icon],
     ["Sir yes Sir!", character_icon]
 ])

@@ -109,7 +109,7 @@ const shoot = (e) => {
         }, 50);
         // Play Sound
         var shot = new Audio('/weapon_sounds/shot.wav');
-        shot.volume = 0.25;
+        shot.volume = 0.15;
         shot.play()
         // Move bullet
         setTimeout(() => {

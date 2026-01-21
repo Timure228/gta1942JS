@@ -5,6 +5,7 @@ body {
 
 .schwamm {
     cursor: url("/cursor_img/schwamm1.png"), auto;
+    overflow: hidden;
 }
 
 .city {
@@ -190,6 +191,7 @@ loc_trigger {
     background-color: #885806;
     border: 3px solid black;
     font-family: textFont;
+    z-index: 20;
 }
 
 #menu_button:hover {
@@ -198,4 +200,22 @@ loc_trigger {
 
 #menu_button:active {
     background-color: rgb(125, 15, 15);
+}
+
+.score_panel {
+    background-color: black;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 50px;
+    left: 420px;
+    z-index: 10;
+    border: 10px solid white;
+}
+
+#score_text {
+    position: absolute;
+    color: white;
+    z-index: 11;
+    font-family: textFont;
 }

@@ -27,9 +27,9 @@ export default class NPC {
     }
 }
 
-export function bullet_collision_npc(npc) {
+export function bullet_collision_npc(npc, hit_sound_, hit_image=false) {
+    let hit = false
     let bullet = document.querySelector(".bullet")
-    let hit = 0
     try {
         let bullet_rect = bullet.getBoundingClientRect()
     npc.forEach(npc => { 
@@ -40,12 +40,16 @@ export function bullet_collision_npc(npc) {
         let length = x_left + npc.width + 30
         let height = y_top + npc.height - 35
         if ((bullet_x > x_left && bullet_x < length) && (bullet_y > y_top && bullet_y < height)) {
-            bullet.remove()
+            document.querySelectorAll(".bullet").forEach((bullet) => bullet.remove())
             console.log("NPC hit")
             // Play hit sound of bullet hitting the NPC
-            const hit_sound = new Audio("/weapon_sounds/bullet_npc_hit.mp3")
+            const hit_sound = new Audio(hit_sound_)
+            hit_sound.volume = 0.4
             hit_sound.play()
-            hit = 1;
+            if (hit_image) {
+                console.log("to be implemented...")
+            }
+            hit = true
         }
     });
     }

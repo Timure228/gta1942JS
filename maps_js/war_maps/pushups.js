@@ -5,13 +5,6 @@ import Object from "/object.js";
 import { check_collision_player } from "/sprite.js";
 import { write_title, scene_transition } from "/cutscene_tools.js";
 
-
-// Ambience Audio
-var city_ambience = new Audio("/maps/ambience_sounds/windstorm.mp3");
-city_ambience.volume = 0.5;
-city_ambience.loop = true;
-city_ambience.play();
-
 let instructor_icon = "/dialog_faces/mil_instructor/mil_instructor.png"
 let instructor_scream_icon = "/dialog_faces/mil_instructor/instructor_screaming.png"
 
