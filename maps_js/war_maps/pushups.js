@@ -15,7 +15,6 @@ city_ambience.play();
 let instructor_icon = "/dialog_faces/mil_instructor/mil_instructor.png"
 let instructor_scream_icon = "/dialog_faces/mil_instructor/instructor_screaming.png"
 
-
 const monolog = new Dialog("dialog", [
     ["Come on Green Ass.", instructor_icon],
     ["40 PUSH UPS!!!", instructor_scream_icon]
@@ -34,7 +33,7 @@ document.body.addEventListener("keydown", (e) => {
         pushup_tag.src = "/maps/anim_maps/pushup2.png"
     }
     else if (pushup_counter == 41) {
-        window.location.href = "http://127.0.0.1:3000/maps/war_maps/shooting_range.html?serverWindowId=72df4631-ba55-48cb-9127-d927edaf8079"
+        window.location.href = "http://127.0.0.1:3000/maps/war_maps/toilet_clean.html?serverWindowId=60ced827-de7e-4de6-b854-8c74626213a2"
     }
     else {
         pushup_h1.innerHTML = "Push ups: " + pushup_counter 

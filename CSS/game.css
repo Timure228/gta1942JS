@@ -1,9 +1,10 @@
-html {
-    cursor: url("/cursor_img/aim_default.png"), auto;
-} 
-
 body {
     background-color: green; 
+    cursor: url("/cursor_img/aim_default.png"), auto;
+}
+
+.schwamm {
+    cursor: url("/cursor_img/schwamm1.png"), auto;
 }
 
 .city {
