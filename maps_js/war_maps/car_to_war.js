@@ -89,4 +89,3 @@ document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
         setTimeout(() => {window.location.href = "https://youtu.be/UfSzkecwbxA?si=OwDXiohhSgBVRZqC&t=592"}, 4300)
     }}
 })
-
