@@ -54,7 +54,7 @@ const dialog = new Dialog("dialog", [
 dialog.start_dialog()
 document.body.addEventListener("keydown", (e) => { if (e.key == "e") {dialog.start_dialog(e)
     if (!document.querySelector(".dialog_window")) {
-        window.location.href = "http://127.0.0.1:3000/maps/civil_maps/apartment_awake.html"
+        window.location.href = "http://127.0.0.1:3000/maps/war_maps/pushups.html"
     }}
 })
 

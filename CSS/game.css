@@ -13,6 +13,11 @@ body {
     overflow: hidden;
 }
 
+.city_snow {
+    background-color: snow;
+    overflow: hidden;
+}
+
 .menu {
     overflow: hidden;
 }
@@ -24,6 +29,10 @@ body {
 
 .train {
     z-index: -1;
+}
+
+.mil_truck {
+    z-index: 10;
 }
 
 .player {
@@ -219,3 +228,4 @@ loc_trigger {
     z-index: 11;
     font-family: textFont;
 }
+

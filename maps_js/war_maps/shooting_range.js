@@ -7,7 +7,7 @@ import { check_collision_player } from "/sprite.js";
 import { bullet_collision_npc } from "/npc.js";
 import { write_title, scene_transition } from "/cutscene_tools.js";
 
-write_title("Shooting Range")
+write_title("Reach over 65% Accuracy")
 
 let player = document.querySelector(".player")
 player.style.top = 400 + "px"
@@ -218,7 +218,7 @@ function show_stat() {
     next_button.style.backgroundColor = "gray";
     next_button.style.color = "white";
     next_button.innerHTML = "→"
-    next_button.onclick = () => window.location.href = "Nononono"
+    next_button.onclick = () => window.location.href = "http://127.0.0.1:3000/maps/war_maps/car_to_war.html"
 
     let repeat_button = document.createElement("button")
     repeat_button.id = "menu_button"

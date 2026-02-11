@@ -140,9 +140,10 @@ const dialog = new Dialog("dialog", [
 ])
 
 dialog.start_dialog()
-document.body.addEventListener("keydown", (e) => { if (e.key == "e") {dialog.start_dialog(e)
+document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
+    dialog.start_dialog(e)
     if (!document.querySelector(".dialog_window")) {
-        window.location.href = "http://127.0.0.1:3000/maps/civil_maps/apartment_awake.html"
+        window.location.href = "http://127.0.0.1:3000/maps/war_maps/frosthold_train_station.html?serverWindowId=07040fa7-a02f-4073-80f6-dd8a64e75570"
     }}
 })
 
