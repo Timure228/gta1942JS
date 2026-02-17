@@ -4,7 +4,7 @@ import Dialog from "/dialog.js";
 import TwoOptionChooseWindow from "/choose_window.js";
 import Object from "/object.js";
 import { check_collision_player } from "/sprite.js";
-import { bullet_collision_npc } from "/npc.js";
+import { bullet_collision_npc, check_shot } from "/npc.js";
 import { write_title, scene_transition } from "/cutscene_tools.js";
 
 write_title("Reach over 65% Accuracy")
@@ -150,14 +150,11 @@ function switch_pointer() {
     }
 }
 
-function check_shot(current_target) {
-    return bullet_collision_npc([current_target], "/weapon_sounds/bullet_npc_hit.mp3")
-}
 
 function get_current_pointer() {
     switch (parseInt(aim_pointer.style.left)) {
         case 328:
-            return shooting_target1
+            return  
         case 528:
             return shooting_target2
         case 728:
@@ -254,7 +251,7 @@ const interval = setInterval(() => {
         clearInterval(interval)
         show_stat()
     }
-    else if (check_shot(current_target)) {
+    else if (check_shot(current_target, "/weapon_sounds/bullet_npc_hit.mp3")) {
         current_target = switch_pointer();
         hits++;
     }

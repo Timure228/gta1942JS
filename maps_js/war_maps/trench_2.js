@@ -2,8 +2,11 @@ import Sprite from "/sprite.js";
 import Dialog from "/dialog.js";
 import { check_collision_player } from "/sprite.js";
 import { write_title, scene_transition } from "/cutscene_tools.js";
+import NPC from "/npc.js";
+import { check_shot } from "/npc.js";
 
-scene_transition(230)
+// scene_transition(1000)
+write_title("1:24 AM        ")
 
 let player = document.querySelector(".player")
 player.style.top = 400 + "px"
@@ -38,31 +41,17 @@ const barrier3 = new Sprite("skeleton", 450, 670, 600, 120)
 barrier3.add_sprite()
 barrier.make_transparent()
 
-const rick = new Sprite("rick", 720, 100, 100, 100, "/sprite_images/characters/rick.png")
-rick.add_sprite()
-
-let character_icon = "/dialog_faces/player_face_war.png"
-let rick_icon = "/dialog_faces/rick/rick.png"
-
-const dialog = new Dialog("dialog", [
-    ["So here we are, we need to settle a little bit.", rick_icon],
-    ["Yeah. It's a bit cool here.", character_icon],
-    ["Yeah. Like in refrigerator. I guess we just add some structure here.", rick_icon],
-    ["We have enough of time.", character_icon],
-    ["I brought mattresses from the training camp.", rick_icon],
-    ["One?", character_icon],
-    ["We don't need more, one of us will be at watch this night.", rick_icon],
-    ["You're right.", character_icon],
-])
-
-dialog.start_dialog()
-document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
-    dialog.start_dialog(e)
-    if (!document.querySelector(".dialog_window")) {
-        scene_transition(230, true)
-        setTimeout(() => {window.location.href = "https://youtu.be/UfSzkecwbxA?si=OwDXiohhSgBVRZqC&t=592"}, 4300)
-    }}
-})
+// Class NPC attributes:
+// class_name, x_left, y_top, width, height, src_, color, move_to_x, speed
+let enemy_x_pos = 800
+const enemy = new NPC("enemy", 1400, 150, 90, 90, "/npc_images/enemy.png", null, enemy_x_pos, 11)
+enemy.add_NPC()
+enemy.move()
+setInterval(() =>{
+    if (parseInt(document.querySelector(".enemy").style.left) < (enemy_x_pos)) 
+    {
+    window.location.href = "http://127.0.0.1:3000/maps/war_maps/trench_2.html"
+}}, 300)
 
 player.addEventListener("keydown", () => check_collision_player([
     barbed_wire1,
@@ -73,5 +62,10 @@ player.addEventListener("keydown", () => check_collision_player([
     barrier1,
     barrier2,
     barrier3,
-    rick
 ]))
+
+setInterval(() => {
+    if (check_shot(enemy, "/weapon_sounds/bullet_npc_hit.mp3", true)) {
+        setTimeout(() => window.location.href = "google.com", 200)
+    }
+}, 1)

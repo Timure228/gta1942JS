@@ -86,6 +86,6 @@ document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
     dialog.start_dialog(e)
     if (!document.querySelector(".dialog_window")) {
         scene_transition(2300, true)
-        setTimeout(() => {window.location.href = "https://youtu.be/UfSzkecwbxA?si=OwDXiohhSgBVRZqC&t=592"}, 4300)
+        setTimeout(() => {window.location.href = "http://127.0.0.1:3000/maps/war_maps/trench_1.html?serverWindowId=68d268b5-729d-4a06-84d0-37ca9f5ef95d"}, 4300)
     }}
 })
