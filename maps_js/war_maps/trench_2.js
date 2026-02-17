@@ -41,6 +41,25 @@ const barrier3 = new Sprite("skeleton", 450, 670, 600, 120)
 barrier3.add_sprite()
 barrier.make_transparent()
 
+// Trees
+const tree1 = new Sprite("tree1", 350, 250, 250, 400, "/sprite_images/tree_images/tree_snow1.png") // no col
+tree1.add_sprite()
+const tree2 = new Sprite("tree1", 70, 50, 250, 400, "/sprite_images/tree_images/tree_snow2.png") // no col
+tree2.add_sprite()
+const tree3 = new Sprite("tree1", 250, -80, 250, 400, "/sprite_images/tree_images/tree_snow2.png") // no col
+tree3.add_sprite()
+const tree4 = new Sprite("tree1", 220, 130, 250, 400, "/sprite_images/tree_images/tree_snow2.png") // no col
+tree4.add_sprite()
+const tree5 = new Sprite("tree1", 445, -100, 150, 350, "/sprite_images/tree_images/tree4.png") // no col
+tree5.add_sprite()
+const tree6 = new Sprite("tree1", 120, 250, 250, 400, "/sprite_images/tree_images/tree_snow2.png") // no col
+tree6.add_sprite()
+
+// Rick
+const sleeping_rick = new Sprite("rick", 720, 100, 100, 100, "/sprite_images/characters/rick_sleep.png") // no col
+sleeping_rick.add_sprite()
+
+
 // Class NPC attributes:
 // class_name, x_left, y_top, width, height, src_, color, move_to_x, speed
 let enemy_x_pos = 800
@@ -66,6 +85,6 @@ player.addEventListener("keydown", () => check_collision_player([
 
 setInterval(() => {
     if (check_shot(enemy, "/weapon_sounds/bullet_npc_hit.mp3", true)) {
-        setTimeout(() => window.location.href = "google.com", 200)
+        setTimeout(() => window.location.href = "http://127.0.0.1:3000/maps/war_maps/trench_3.html", 200)
     }
 }, 1)

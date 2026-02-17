@@ -3,8 +3,6 @@ import Dialog from "/dialog.js";
 import { check_collision_player } from "/sprite.js";
 import { write_title, scene_transition } from "/cutscene_tools.js";
 
-// scene_transition(230)
-
 let player = document.querySelector(".player")
 player.style.top = 400 + "px"
 player.style.left = 720 + "px"
@@ -52,32 +50,13 @@ tree5.add_sprite()
 const tree6 = new Sprite("tree1", 120, 250, 250, 400, "/sprite_images/tree_images/tree_snow2.png") // no col
 tree6.add_sprite()
 
+// Rick
+const sleeping_rick = new Sprite("rick", 720, 100, 100, 100, "/sprite_images/characters/rick.png") // no col
+sleeping_rick.add_sprite()
 
-const rick = new Sprite("rick", 720, 100, 100, 100, "/sprite_images/characters/rick.png") // no col
-rick.add_sprite()
-
-let character_icon = "/dialog_faces/player_face_war.png"
-let rick_icon = "/dialog_faces/rick/rick.png"
-
-const dialog = new Dialog("dialog", [
-    ["So here we are, we need to settle a little bit.", rick_icon],
-    ["Yeah. It's a bit cool here.", character_icon],
-    ["Yeah. Like in refrigerator. I guess we just add some structure here.", rick_icon],
-    ["We have enough of time.", character_icon],
-    ["I brought mattresses from the training camp.", rick_icon],
-    ["One?", character_icon],
-    ["We don't need more, one of us will be at watch this night.", rick_icon],
-    ["You're right.", character_icon],
-])
-
-dialog.start_dialog()
-document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
-    dialog.start_dialog(e)
-    if (!document.querySelector(".dialog_window")) {
-        scene_transition(230, true)
-        setTimeout(() => {window.location.href = "https://youtu.be/UfSzkecwbxA?si=OwDXiohhSgBVRZqC&t=592"}, 4300)
-    }}
-})
+// Dead enemy
+const enemy_dead = new Sprite(null, 1140, 50, 190, 140, "/npc_images/enemy_dead.png") // no col
+enemy_dead.add_sprite()
 
 player.addEventListener("keydown", () => check_collision_player([
     barbed_wire1,
@@ -88,5 +67,24 @@ player.addEventListener("keydown", () => check_collision_player([
     barrier1,
     barrier2,
     barrier3,
-    rick
 ]))
+
+let character_icon = "/dialog_faces/player_face_war.png"
+let rick_icon = "/dialog_faces/rick/rick.png"
+
+const dialog = new Dialog("dialog", [
+    ["What was that!?", rick_icon],
+    ["I didn't want to...", character_icon],
+    ["Oh.", rick_icon],
+    ["You did your job man.", rick_icon],
+])
+
+dialog.start_dialog()
+document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
+    dialog.start_dialog(e)
+    if (!document.querySelector(".dialog_window")) {
+        scene_transition(100, true)
+        setTimeout(() => {window.location.href = "https://youtu.be/UfSzkecwbxA?si=OwDXiohhSgBVRZqC&t=592"}, 2000)
+    }}
+})
+

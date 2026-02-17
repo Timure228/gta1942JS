@@ -41,6 +41,7 @@ barbed_wire8.add_sprite()
 const barbed_wire9 = new Sprite("barbed_wire1", 1350, 500, 150, 100, "/sprite_images/barbed_wire.png")
 barbed_wire9.add_sprite()
 
+// Trees
 const tree1 = new Sprite("tree1", 350, 350, 150, 300, "/sprite_images/tree_images/tree_snow1.png") // no col
 tree1.add_sprite()
 const tree2 = new Sprite("tree1", 610, 370, 150, 300, "/sprite_images/tree_images/tree_snow2.png") // no col
