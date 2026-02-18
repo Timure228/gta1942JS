@@ -37,7 +37,7 @@ const barrier1 = new Sprite("skeleton", 500, 0, 140, 1200)
 barrier1.add_sprite()
 const barrier2 = new Sprite("skeleton", 450, 0, 600, 120)
 barrier2.add_sprite()
-const barrier3 = new Sprite("skeleton", 450, 670, 600, 120)
+const barrier3 = new Sprite("skeleton", 450, 570, 600, 120)
 barrier3.add_sprite()
 barrier.make_transparent()
 
@@ -59,6 +59,9 @@ tree6.add_sprite()
 const sleeping_rick = new Sprite("rick", 720, 100, 100, 100, "/sprite_images/characters/rick_sleep.png") // no col
 sleeping_rick.add_sprite()
 
+let death_video = document.createElement("source")
+death_video.src = "/videos/wanted.webm" 
+death_video.type = "video/mp4"
 
 // Class NPC attributes:
 // class_name, x_left, y_top, width, height, src_, color, move_to_x, speed
@@ -69,7 +72,8 @@ enemy.move()
 setInterval(() =>{
     if (parseInt(document.querySelector(".enemy").style.left) < (enemy_x_pos)) 
     {
-    window.location.href = "http://127.0.0.1:3000/maps/war_maps/trench_2.html"
+        document.querySelector(".wanted").append(death_video)
+    setTimeout(() => window.location.href = "http://127.0.0.1:3000/maps/war_maps/trench_2.html", 8000)
 }}, 300)
 
 player.addEventListener("keydown", () => check_collision_player([
@@ -85,6 +89,7 @@ player.addEventListener("keydown", () => check_collision_player([
 
 setInterval(() => {
     if (check_shot(enemy, "/weapon_sounds/bullet_npc_hit.mp3", true)) {
+
         setTimeout(() => window.location.href = "http://127.0.0.1:3000/maps/war_maps/trench_3.html", 200)
     }
 }, 1)

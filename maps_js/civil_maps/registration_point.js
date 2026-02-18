@@ -7,7 +7,7 @@ import { write_title, scene_transition } from "/cutscene_tools.js";
 
 scene_transition(5300, false)
 
-write_title("Port Luna military registration point 7:00")
+write_title("Port Luna military registration point 7:00 AM")
 
 let player = document.querySelector(".player_civil")
 player.style.top = 300 + "px"
@@ -30,7 +30,7 @@ barrier4.add_sprite()
 barrier1.make_transparent()
 
 let character_icon = "/dialog_faces/player_face_civil.png"
-let inspector_icon = "/dialog_faces/inspector.png"
+let inspector_icon = "/dialog_faces/registration_man.png"
 
 const dialog = new Dialog("dialog", [
     ["Good Morning Sir", inspector_icon],

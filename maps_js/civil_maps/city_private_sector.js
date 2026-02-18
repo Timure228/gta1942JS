@@ -33,7 +33,7 @@ barrier2.make_transparent()
 // Trigger to the next locatinon
 const trigger = new Sprite("loc_trigger", 1550, 0, 170, 1700, null, null, null, null, null, null, "red",
     "http://127.0.0.1:3000/maps/civil_maps/city_industrial.html")
-trigger.add_sprite()
+trigger.add_sprite() 
 
 
 

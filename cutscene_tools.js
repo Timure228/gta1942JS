@@ -20,16 +20,16 @@ export function write_title(title) {
     document.body.append(h1)
 }
 
-export function scene_transition(delay, reverse=false) {
+export function scene_transition(delay, reverse=false, color="black") {
     let box = document.createElement("span")
     box.classList.add("scene_transition")
     box.style.position = "absolute"
-    box.style.left = "0"
-    box.style.top = "0"
-    box.style.backgroundColor = "black"
+    box.style.left = "0px"
+    box.style.top = "0px"
+    box.style.backgroundColor = color
     box.style.height = "2000px"
     box.style.width = "2000px"
-    box.style.zIndex = 4
+    box.style.zIndex = 100
     reverse ? box.style.opacity = 0 : 1
     let j;
     reverse ? j = 0 : j = 1;

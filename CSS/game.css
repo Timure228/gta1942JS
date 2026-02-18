@@ -32,13 +32,14 @@ body {
 }
 
 .mil_truck {
-    z-index: 10;
+    z-index: 200;
 }
 
 .player {
     position: absolute;
     transition: 0.1s linear;
     outline: none;
+    z-index: 10;
 }
 
 .player_civil {
@@ -229,3 +230,15 @@ loc_trigger {
     font-family: textFont;
 }
 
+.white_screen {
+    z-index: 100;
+}
+
+.wanted {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: -770px;
+    width: 3080px;
+    height: 800px;
+}
