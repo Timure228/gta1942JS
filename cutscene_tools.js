@@ -6,7 +6,7 @@ export function write_title(title) {
     h1.style.color = "white"
     h1.style.fontSize = "2.5em"
     h1.style.fontFamily = "textFont"
-    h1.style.zIndex = 4
+    h1.style.zIndex = 100
 
     let j = 0
     const interval = setInterval(() => {

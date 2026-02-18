@@ -12,7 +12,7 @@ player.style.left = 720 + "px"
 player.style.rotate = 0 + "deg"
 
 // Ambience Audio
-var city_ambience = new Audio("/maps/ambience_sounds/windstorm.mp3");
+let city_ambience = new Audio("/maps/ambience_sounds/windstorm.mp3");
 city_ambience.volume = 0.6;
 city_ambience.loop = true;
 city_ambience.play();
@@ -86,7 +86,7 @@ let character_icon = "/dialog_faces/player_face_war_late.png"
 let rick_icon = "/dialog_faces/rick/rick_cooked.png"
 
 const dialog = new Dialog("dialog", [
-    ["Do you have some cigarettes?", rick_icon],
+    ["Do you have some cigarettes left?", rick_icon],
     ["It was the last package.", character_icon],
     ["Fuck.", rick_icon],
     ["However man. Can you plea", rick_icon],
@@ -118,6 +118,7 @@ document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
         )
         art_explotion.add_sprite()
         art_explotion.play_anim()
+        city_ambience.volume = 0
         // Tinnitus sound
         let tinnitus = new Audio("/sfx/tinnitus.mp3")
         tinnitus.volume = 0.35

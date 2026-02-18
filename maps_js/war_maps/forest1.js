@@ -16,7 +16,7 @@ city_ambience.play();
 
 // Ambience Audio 2
 var war_ambience = new Audio("/maps/ambience_sounds/distant_battle.mp3");
-war_ambience.volume = 0.4;
+war_ambience.volume = 0.2;
 war_ambience.loop = true;
 war_ambience.play();
 
@@ -56,7 +56,7 @@ bush1.add_sprite()
 
 // Trigger to the next locatinon
 const trigger = new Sprite("loc_trigger", -130, 0, 130, 1700, null, null, null, null, null, null, "red",
-    "http://127.0.0.1:3000/maps/civil_maps/forest2.html")
+    "http://127.0.0.1:3000/maps/war_maps/forest2.html")
 trigger.add_sprite()
 
 

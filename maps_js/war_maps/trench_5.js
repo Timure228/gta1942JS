@@ -129,7 +129,7 @@ const dialog = new Dialog("dialog", [
     ["Yes I can hear you.", character_icon],
     ["I need help.", character_icon],
     ["General Staff ordered us to retreat. All units should retreat to...", walkie_talkie],
-    ["Hey! Do you hear me? Where should we retreat?", character_icon],
+    ["Hey! Do you hear me? Where should we retreat to?", character_icon],
     ["A...e...e...f...dc...ov...r", walkie_talkie],
     ["Fucking radio.", character_icon],
     ["Ok, I guess I should go on my own.", character_icon]

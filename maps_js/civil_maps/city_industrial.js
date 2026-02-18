@@ -101,7 +101,6 @@ barrier5.add_sprite()
 barrier1.make_transparent()
 
 let character_icon = "/dialog_faces/player_face_civil.png"
-let inspector_icon = "/dialog_faces/inspector.png"
 
 const monolog = new Dialog("monolog", [
     ["[coughs]", character_icon],
