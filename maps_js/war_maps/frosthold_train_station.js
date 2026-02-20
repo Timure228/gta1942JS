@@ -1,10 +1,5 @@
-import Sprite from "/sprite.js";
 import Dialog from "/dialog.js";
-import TwoOptionChooseWindow from "/choose_window.js";
-import Object from "/object.js";
-import { check_collision_player } from "/sprite.js";
-import { write_title, scene_transition } from "/cutscene_tools.js";
-
+import { write_title } from "/cutscene_tools.js";
 
 // Ambience Audio
 var city_ambience = new Audio("/maps/ambience_sounds/windstorm.mp3");
@@ -21,7 +16,6 @@ write_title("Frosthold Train Station Platform A2 23:00 AM")
 let character_icon = "/dialog_faces/player_face_war.png"
 let rick_icon = "/dialog_faces/rick/rick.png"
 let rick_icon_question = "/dialog_faces/rick/rick_questioning.png"
-let rick_icon_laugh = "/dialog_faces/rick/rick_laughing.png"
 let instructor_icon = "/dialog_faces/mil_instructor/mil_instructor.png"
 let instructor_scream_icon = "/dialog_faces/mil_instructor/instructor_screaming.png"
 let instructor_angry_icon = "/dialog_faces/mil_instructor/instructor_angry.png"
@@ -57,5 +51,3 @@ document.body.addEventListener("keydown", (e) => { if (e.key == "e") {dialog.sta
         window.location.href = "http://127.0.0.1:3000/maps/war_maps/pushups.html"
     }}
 })
-
-

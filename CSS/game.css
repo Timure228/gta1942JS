@@ -237,8 +237,8 @@ loc_trigger {
 .wanted {
     z-index: 1000;
     position: absolute;
-    top: 0;
-    left: -770px;
-    width: 3080px;
-    height: 800px;
+    top: -70px;
+    left: -1750px;
+    width: 5080px;
+    height: 900px;
 }

@@ -15,17 +15,12 @@ city_ambience.play();
 
 const barrier2 = new Sprite("skeleton", 0, 510, 1700, 100)
 barrier2.add_sprite()
-
 const barrier3 = new Sprite("skeleton", 0, 40, 1700, 100)
 barrier3.add_sprite()
-
 const barrier4 = new Sprite("skeleton", 520, 220, 690, 205)
 barrier4.add_sprite()
-
 const barrier5 = new Sprite("skeleton", 1320, 75, 400, 350)
 barrier5.add_sprite()
-
-
 const barrier6 = new Sprite("skeleton", 0, 120, 260, 310)
 barrier6.add_sprite()
 barrier2.make_transparent()

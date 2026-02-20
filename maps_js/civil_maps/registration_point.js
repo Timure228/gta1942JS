@@ -14,8 +14,6 @@ player.style.top = 300 + "px"
 player.style.left = 300 + "px"
 player.style.rotate = 0 + "deg"
 
-
-
 const barrier1 = new Sprite("skeleton", 900, 140, 150, 330)
 barrier1.add_sprite()
 
@@ -29,7 +27,6 @@ const barrier4 = new Sprite("skeleton", 200, 100, 1500, 133)
 barrier4.add_sprite()
 barrier1.make_transparent()
 
-let character_icon = "/dialog_faces/player_face_civil.png"
 let inspector_icon = "/dialog_faces/registration_man.png"
 
 const dialog = new Dialog("dialog", [
@@ -64,7 +61,6 @@ document.body.addEventListener("keydown", (e) => {
     if (choice_ == "one") {
         dialog1.start_dialog(e)
         document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
-            dialog1.start_dialog(e)
             if (!document.querySelector(".dialog_window")) {
                 window.location.href = "http://127.0.0.1:3000/maps/civil_maps/train.html"
             }

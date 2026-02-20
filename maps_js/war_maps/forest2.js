@@ -52,7 +52,7 @@ const dialog = new Dialog("dialog", [
     ["[coughs]", soldier_coughs_icon],
     ["Shoot me.", soldier_icon],
     ["No, what do you mean?", character_icon],
-    ["Mechanized troops will be here in 10 minutes, you have to.", soldier_icon],
+    ["Enemy's mechanized troops will be here in 10 minutes, you have to.", soldier_icon],
     ["Oh shit.", character_icon],
     ])
 
