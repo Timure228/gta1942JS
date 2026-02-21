@@ -17,7 +17,6 @@ city_ambience.volume = 0.5;
 city_ambience.loop = true;
 city_ambience.play();
 
-
 // class_name, x_left, y_top, width, height, src_, rotation, isanim, n_frames, anim_path, anim_speed, color, trigger_link
 // Tube smoke
 const smoke_tube = new Sprite( // no col
@@ -86,16 +85,12 @@ smoke_tube3.play_anim()
 
 const barrier1 = new Sprite("skeleton", 0, 340, 1700, 170)
 barrier1.add_sprite()
-
 const barrier2 = new Sprite("skeleton", 0, 525, 930, 450)
 barrier2.add_sprite()
-
 const barrier3 = new Sprite("skeleton", 1535, 500, 95, 450)
 barrier3.add_sprite()
-
 const barrier4 = new Sprite("skeleton", 920, 690, 800, 45)
 barrier4.add_sprite()
-
 const barrier5 = new Sprite("skeleton", -95, 0, 80, 1700)
 barrier5.add_sprite()
 barrier1.make_transparent()
@@ -111,7 +106,6 @@ const monolog = new Dialog("monolog", [
 
 const trigger = new Object(null, 1170, 590, 5, 50, "green")
 trigger.add_object()
-
 
 document.body.addEventListener("keydown", (e) => { if (e.key == "e") {monolog.start_dialog(e)}})
 player.addEventListener("keydown", () => {check_collision_player([barrier1, barrier2, barrier3, barrier4, barrier5])

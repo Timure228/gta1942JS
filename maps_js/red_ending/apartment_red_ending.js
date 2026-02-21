@@ -28,9 +28,6 @@ barrier4.add_sprite()
 const barrier5 = new Sprite("skeleton", 860, 0, 1750, 50)
 barrier5.add_sprite()
 
-const barrier6 = new Sprite("skeleton", 1050, 0, 500, 500)
-barrier6.add_sprite()
-
 const barrier7 = new Sprite("skeleton", 960, 80, 200, 170)
 barrier7.add_sprite()
 
@@ -39,25 +36,29 @@ barrier8.add_sprite()
 
 const barrier9 = new Sprite("skeleton", 0, 0, 50, 3000)
 barrier9.add_sprite()
-barrier1.make_transparent()
 
-const tv = new Object(null, 1018, 150, 70, 105, "green")
-tv.add_object()
+const barrier10 = new Sprite("skeleton", 1500, 0, 150, 1500)
+barrier10.add_sprite()
+
+barrier1.make_transparent()
 
 player.addEventListener("keydown", () => {check_collision_player([barrier1, 
     barrier2, 
     barrier3, 
     barrier4, 
     barrier5, 
-    barrier6, 
     barrier7,
     barrier8,
-    barrier9])
-    check_collision_player([tv], false, true)
+    barrier9,
+    barrier10])
+    check_collision_player([sofa], false, true)
 })    
 
-let character_icon = "/dialog_faces/player_face_civil.png"
-const monolog = new Dialog("monolog", [["Time to watch some TV.", character_icon]])
+const sofa = new Object(null, 1240, 30, 235, 85, "green")
+sofa.add_object()
+
+let character_icon = "/dialog_faces/player_released.png"
+const monolog = new Dialog("monolog", [["Ok, only one night.", character_icon]])
 
 document.body.addEventListener("keydown", (e) => { if (e.key == "e") {monolog.start_dialog(e)}})
 

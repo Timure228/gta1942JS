@@ -62,6 +62,7 @@ function getting_shot_forest3() {
         parseInt(player.style.top) - 70, 
         230, 230, "/sprite_images/characters/player_dead.png") // no col
     dead_player.add_sprite()
+    setTimeout(() => window.location.href = "http://127.0.0.1:3000/maps/red_ending/forest3.html", 8000)
 }
 
 document.body.addEventListener("click", () => {
@@ -95,7 +96,7 @@ document.body.addEventListener("keydown", (e) => {
         document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
             dialog1.start_dialog(e)
             if (!document.querySelector(".dialog_window")) {
-                window.location.href = "http://127.0.0.1:3000/maps/civil_maps/dd.html"
+                window.location.href = "http://127.0.0.1:3000/maps/civil_maps/feel_free.html"
             }
         }})
     }
@@ -106,7 +107,7 @@ document.body.addEventListener("keydown", (e) => {
 
 player.addEventListener("keydown", () => {check_collision_player([barrier2, barrier3, barrier4, barrier5])})
 
-const interval = setInterval(() => {if (parseInt(player.style.left) < 1100) {
+const interval = setInterval(() => {if (parseInt(player.style.left) < 1170) {
         clearInterval(interval)
         getting_shot_forest3()
 }}, 10)
