@@ -88,7 +88,7 @@ document.body.addEventListener("keydown", (e) => {
     }
     if (choice_ == "two") {
         scene_transition(5, true, "blue")
-        setTimeout(() => window.location.href = "dd.com", 2500)
+        setTimeout(() => window.location.href = "http://127.0.0.1:3000/maps/blue_ending/forest3_blue.html", 2500)
 }})
 
 

@@ -45,6 +45,7 @@ const civil_car = new Sprite(
 )
 civil_car.add_sprite()
 civil_car.play_anim()
+
 // Houses
 const house1 = new Sprite("house1", 400, 100, 300, 100, "/sprite_images/house_images/house1.png")
 house1.add_sprite()
