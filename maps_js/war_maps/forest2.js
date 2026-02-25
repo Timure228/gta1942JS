@@ -84,7 +84,7 @@ document.body.addEventListener("keydown", (e) => {
     if (choice_ == "one") {
         new Audio('/weapon_sounds/shot.wav').play()
         scene_transition(5, true, "red")
-        setTimeout(() => window.location.href = "", 2700)
+        setTimeout(() => window.location.href = "http://127.0.0.1:3000/maps/red_ending/forest3.html ", 2700)
     }
     if (choice_ == "two") {
         scene_transition(5, true, "blue")

@@ -93,6 +93,8 @@ const barrier4 = new Sprite("skeleton", 920, 690, 800, 45)
 barrier4.add_sprite()
 const barrier5 = new Sprite("skeleton", -95, 0, 80, 1700)
 barrier5.add_sprite()
+const barrier6 = new Sprite("skeleton", 1200, 0, 80, 1700)
+barrier6.add_sprite()
 barrier1.make_transparent()
 
 let character_icon = "/dialog_faces/player_face_civil.png"
@@ -108,7 +110,7 @@ const trigger = new Object(null, 1170, 590, 5, 50, "green")
 trigger.add_object()
 
 document.body.addEventListener("keydown", (e) => { if (e.key == "e") {monolog.start_dialog(e)}})
-player.addEventListener("keydown", () => {check_collision_player([barrier1, barrier2, barrier3, barrier4, barrier5])
+player.addEventListener("keydown", () => {check_collision_player([barrier1, barrier2, barrier3, barrier4, barrier5, barrier6])
     check_collision_player([trigger], false, true)
 })    
 document.body.addEventListener("keydown", (e) => { if (e.key == "t" && document.querySelector(".key_tip")) {

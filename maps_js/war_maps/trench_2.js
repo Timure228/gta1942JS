@@ -89,7 +89,6 @@ player.addEventListener("keydown", () => check_collision_player([
 
 setInterval(() => {
     if (check_shot(enemy, "/weapon_sounds/bullet_npc_hit.mp3", true)) {
-
         setTimeout(() => window.location.href = "http://127.0.0.1:3000/maps/war_maps/trench_3.html", 200)
     }
 }, 1)

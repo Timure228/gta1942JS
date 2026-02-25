@@ -40,6 +40,9 @@ barrier9.add_sprite()
 const barrier10 = new Sprite("skeleton", 1500, 0, 150, 1500)
 barrier10.add_sprite()
 
+const barrier11 = new Sprite("skeleton", 0, 650, 1500, 150)
+barrier11.add_sprite()
+
 barrier1.make_transparent()
 
 player.addEventListener("keydown", () => {check_collision_player([barrier1, 
@@ -50,7 +53,8 @@ player.addEventListener("keydown", () => {check_collision_player([barrier1,
     barrier7,
     barrier8,
     barrier9,
-    barrier10])
+    barrier10,
+    barrier11])
     check_collision_player([sofa], false, true)
 })    
 
@@ -63,5 +67,5 @@ const monolog = new Dialog("monolog", [["Ok, only one night.", character_icon]])
 document.body.addEventListener("keydown", (e) => { if (e.key == "e") {monolog.start_dialog(e)}})
 
 document.body.addEventListener("keydown", (e) => { if (e.key == "t" && document.querySelector(".key_tip")) {
-    window.location.href = "http://127.0.0.1:3000/maps/civil_maps/tv.html"
+    window.location.href = "http://127.0.0.1:3000/maps/red_ending/awake.html"
 }})

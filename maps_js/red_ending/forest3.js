@@ -96,7 +96,7 @@ document.body.addEventListener("keydown", (e) => {
         document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
             dialog1.start_dialog(e)
             if (!document.querySelector(".dialog_window")) {
-                window.location.href = "http://127.0.0.1:3000/maps/civil_maps/feel_free.html"
+                window.location.href = "http://127.0.0.1:3000/maps/red_ending/feel_free.html"
             }
         }})
     }

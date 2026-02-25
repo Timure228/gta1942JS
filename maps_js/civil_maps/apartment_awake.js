@@ -47,8 +47,8 @@ const barrier10 = new Sprite("skeleton", 30, 325, 200, 50)
 barrier10.add_sprite()
 barrier1.make_transparent()
 
-const tv = new Object("tv", 30, 415, 150, 80, "green")
-tv.add_object()
+const door_trigger = new Object("door_trigger", 30, 415, 150, 80, "green")
+door_trigger.add_object()
 
 
 player.addEventListener("keydown", () => {check_collision_player([barrier1, 
@@ -61,14 +61,12 @@ player.addEventListener("keydown", () => {check_collision_player([barrier1,
     barrier8,
     barrier9,
     barrier10])
-    check_collision_player([tv], false, true)
+    check_collision_player([door_trigger], false, true)
 })    
 
 let character_icon = "/dialog_faces/player_face_civil.png"
 const monolog = new Dialog("monolog", [
     ["Who the fuck needs me at 6 AM???", character_icon]])
-
-
 
 document.body.addEventListener("keydown", (e) => { if (e.key == "e") {monolog.start_dialog(e)}})
 document.body.addEventListener("keydown", (e) => { if (e.key == "t" && document.querySelector(".key_tip")) {

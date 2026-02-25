@@ -4,8 +4,8 @@ import Object from "/object.js";
 import { check_collision_player } from "/sprite.js";
 import { write_title, scene_transition } from "/cutscene_tools.js";
 
-// scene_transition()
-// write_title("5 Years later. Prison for War Prisoners 12:24 AM")
+scene_transition(1000)
+write_title("5 Years later. Prison for War Prisoners 12:24 AM")
 
 let player = document.querySelector(".player_civil")
 player.style.top = 550 + "px"
@@ -30,8 +30,9 @@ barrier4.add_sprite()
 barrier1.make_transparent()
 
 const trigger = new Sprite("loc_trigger", 0, 700, 1700, 140, null, null, null, null, null, null, "red",
-    "http://127.0.0.1:3000/maps/civil_maps/city_industrial.html")
+    "http://127.0.0.1:3000/maps/red_ending/city_industrial_red_ending.html")
 trigger.add_sprite() 
+trigger.make_transparent()
 
 let character_icon = "/dialog_faces/player_released.png"
 const monolog = new Dialog("monolog", [

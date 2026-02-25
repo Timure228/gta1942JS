@@ -8,7 +8,7 @@ write_title("Industrial Zone 22:05 AM")
 
 let player = document.querySelector(".player_civil")
 player.style.top = 500 + "px"
-player.style.left = 0 + "px"
+player.style.left = 1300 + "px"
 player.style.rotate = 0 + "deg"
 
 // Ambience Audio
@@ -28,6 +28,8 @@ const barrier4 = new Sprite("skeleton", 920, 690, 800, 45)
 barrier4.add_sprite()
 const barrier5 = new Sprite("skeleton", -95, 0, 80, 1700)
 barrier5.add_sprite()
+const barrier6 = new Sprite("skeleton", 1230, 520, 200, 200)
+barrier6.add_sprite()
 barrier1.make_transparent()
 
 const car = new Sprite("car", 1460, 660, 50, 100, "/sprite_images/cars/civil_car1/civil_car1.png")
@@ -47,9 +49,9 @@ const trigger = new Object(null, 1170, 590, 5, 50, "green")
 trigger.add_object()
 
 document.body.addEventListener("keydown", (e) => { if (e.key == "e") {monolog.start_dialog(e)}})
-player.addEventListener("keydown", () => {check_collision_player([barrier1, barrier2, barrier3, barrier4, barrier5])
+player.addEventListener("keydown", () => {check_collision_player([barrier1, barrier2, barrier3, barrier4, barrier5, barrier6])
     check_collision_player([trigger], false, true)
 })    
 document.body.addEventListener("keydown", (e) => { if (e.key == "t" && document.querySelector(".key_tip")) {
-    window.location.href = "http://127.0.0.1:3000/maps/civil_maps/apartment.html"
+    window.location.href = "http://127.0.0.1:3000/maps/red_ending/apartment_red_ending.html"
 }})

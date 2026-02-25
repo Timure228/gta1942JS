@@ -21,6 +21,10 @@ const barrier2 = new Sprite("skeleton", 0, 400, 1775, 370)
 barrier2.add_sprite()
 const barrier3 = new Sprite("skeleton", 0, 70, 130, 380)
 barrier3.add_sprite()
+const barrier4 = new Sprite("skeleton", -130, 0, 130, 1280)
+barrier4.add_sprite()
+const barrier5 = new Sprite("skeleton", 0, -120, 1300, 170)
+barrier5.add_sprite()
 barrier1.make_transparent()
 
 // Trigger to the next locatinon
@@ -30,6 +34,6 @@ trigger.add_sprite()
 
 
 
-player.addEventListener("keydown", () => {check_collision_player([barrier1, barrier2, barrier3])
+player.addEventListener("keydown", () => {check_collision_player([barrier1, barrier2, barrier3, barrier4, barrier5])
     check_collision_player([trigger], true) // true parameter is for trigger sprites
 })

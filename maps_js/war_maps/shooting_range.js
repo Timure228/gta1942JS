@@ -94,16 +94,16 @@ barrier2.add_sprite()
 barrier.make_transparent()
 
 // class_name, x_left, y_top, width, height, src_, color
-const shooting_target1 = new NPC("shooting_target", 300, 100, 100, 100, "/npc_images/aim_target.png", false)
+const shooting_target1 = new NPC("shooting_target", 300, 100, 100, 100, "/npc_images/aim_target.png", null)
 shooting_target1.add_NPC()
 
-const shooting_target2 = new NPC("shooting_target", 500, 100, 100, 100, "/npc_images/aim_target.png", false)
+const shooting_target2 = new NPC("shooting_target", 500, 100, 100, 100, "/npc_images/aim_target.png", null)
 shooting_target2.add_NPC()
 
-const shooting_target3 = new NPC("shooting_target", 700, 100, 100, 100, "/npc_images/aim_target.png", false)
+const shooting_target3 = new NPC("shooting_target", 700, 100, 100, 100, "/npc_images/aim_target.png", null)
 shooting_target3.add_NPC()
 
-const shooting_target4 = new NPC("shooting_target", 900, 100, 100, 100, "/npc_images/aim_target.png", false)
+const shooting_target4 = new NPC("shooting_target", 900, 100, 100, 100, "/npc_images/aim_target.png", null)
 shooting_target4.add_NPC()
 
 player.addEventListener("keydown", () => check_collision_player([
@@ -155,7 +155,7 @@ function switch_pointer() {
 function get_current_pointer() {
     switch (parseInt(aim_pointer.style.left)) {
         case 328:
-            return  
+            return shooting_target1
         case 528:
             return shooting_target2
         case 728:
@@ -252,7 +252,7 @@ const interval = setInterval(() => {
         clearInterval(interval)
         show_stat()
     }
-    else if (check_shot(current_target, "/weapon_sounds/bullet_npc_hit.mp3")) {
+    else if (check_shot(current_target, "/weapon_sounds/bullet_npc_hit.mp3", false)) {
         current_target = switch_pointer();
         hits++;
     }

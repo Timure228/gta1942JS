@@ -48,7 +48,7 @@ let instructor_scream_icon = "/dialog_faces/mil_instructor/instructor_screaming.
 
 const monolog = new Dialog("dialog", [
     ["But how will it help me to become a better fighter Sir?", character_icon],
-    ["Shut your mouth Green Ass!!!", instructor_scream_icon],
+    ["Shut up your mouth Green Ass!!!", instructor_scream_icon],
     ["MY ORDERS ARE NOT FOR DISCUSSION - ONLY EXECUTION!!!", instructor_scream_icon],
     ["Now I want this toilet to be as clean as your browser history!!!", instructor_scream_icon],
     ["Sir yes Sir!", character_icon]

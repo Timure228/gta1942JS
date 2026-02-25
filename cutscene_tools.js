@@ -49,3 +49,33 @@ export function scene_transition(delay, reverse=false, color="black") {
     document.body.append(box)
 }
 
+export async function write_credits(title, callback) {
+    let h1 = document.createElement("h1")
+    h1.style.position = "absolute"
+    h1.style.top = "100px"
+    h1.style.left = "300px"
+    h1.style.color = "black"
+    h1.style.fontSize = "5.5em"
+    h1.style.fontFamily = "textFont"
+    h1.style.zIndex = 100   
+    document.body.append(h1)
+    for (let i=0; i < title.length; i++) {
+        await type(title, i, h1)
+        h1.textContent = ""
+    }
+    callback()
+}
+
+function type(title, id, h1) {
+    return new Promise((resolve) => {
+    let j = 0
+    const interval = setInterval(() => {
+            h1.textContent += title[id].charAt(j);
+            j++;
+            if (j >= title[id].length) {
+                clearInterval(interval);
+                setTimeout(resolve, 1100);
+            }
+        }, 80);
+    })
+}

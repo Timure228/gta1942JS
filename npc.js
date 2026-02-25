@@ -47,21 +47,19 @@ export default class NPC {
 export function bullet_collision_npc(npc, hit_sound_, moving=false) {
     let hit = false
     let bullet = document.querySelector(".bullet")
-    try {
-        let bullet_rect = bullet.getBoundingClientRect()
+    let bullet_rect = bullet.getBoundingClientRect()
     npc.forEach(npc => { 
+        console.log(npc)
         let bullet_x = parseInt(bullet_rect.x)
         let bullet_y = parseInt(bullet_rect.y)
-        let x_left
-        let y_top
+        let x_left = npc.x_left
+        let y_top = npc.y_top
         if (moving) {
             let npc_tag = document.querySelector("." + npc.class_name)
             x_left = parseInt(npc_tag.style.left)
             y_top = parseInt(npc_tag.style.top)
-        } else {
-            let x_left = npc.x_left
-            let y_top = npc.y_top
         }
+        console.log(x_left)
         let length = x_left + npc.width + 30
         let height = y_top + npc.height - 35
         console.log(x_left)
@@ -74,9 +72,7 @@ export function bullet_collision_npc(npc, hit_sound_, moving=false) {
             hit_sound.play()
             hit = true
         }
-    });
-    }
-    catch (e) {}
+    });    
     return hit;
 }
 

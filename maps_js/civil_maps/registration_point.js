@@ -36,7 +36,7 @@ const dialog = new Dialog("dialog", [
 const dialog1 = new Dialog("dialog", [
     ["Your time has come. You will be transported to the Frosthold.", inspector_icon],
     ["You are in reserve for now. Your Train lives in 30 minutes...", inspector_icon],
-    ["Why are you standing here? MOVE!!!", inspector_icon],
+    ["Why are you still standing here? MOVE!!!", inspector_icon],
     ])
 
 const dialog2 = new Dialog("dialog", [
@@ -59,8 +59,8 @@ document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
 document.body.addEventListener("keydown", (e) => {
     const choice_ = choice.choose(e);
     if (choice_ == "one") {
-        dialog1.start_dialog(e)
         document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
+            dialog1.start_dialog(e)
             if (!document.querySelector(".dialog_window")) {
                 window.location.href = "http://127.0.0.1:3000/maps/civil_maps/train.html"
             }
