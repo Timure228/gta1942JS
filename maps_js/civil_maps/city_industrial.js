@@ -83,6 +83,7 @@ const smoke_tube3 = new Sprite( // no col
 smoke_tube3.add_sprite()
 smoke_tube3.play_anim()
 
+// Barriers
 const barrier1 = new Sprite("skeleton", 0, 340, 1700, 170)
 barrier1.add_sprite()
 const barrier2 = new Sprite("skeleton", 0, 525, 930, 450)

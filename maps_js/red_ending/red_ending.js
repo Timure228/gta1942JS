@@ -21,7 +21,7 @@ const interval = setInterval(() => {
         clearInterval(interval)
         write_credits([
             "Mark returned to normal life.", 
-            "His apartment was abandoned after return.",
+            "His apartment was abandoned after his return.",
             "But he managed to return ownership of it.",
             "He filled his apartment with furniture.",
             "Mark finally found a job as builder.",

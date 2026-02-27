@@ -1,7 +1,4 @@
 import Sprite from "/sprite.js";
-import NPC from "/npc.js";
-import Dialog from "/dialog.js";
-import Object from "/object.js";
 import { check_collision_player } from "/sprite.js";
 import { write_title } from "/cutscene_tools.js";
 
@@ -28,10 +25,16 @@ house1.add_sprite()
 const house2 = new Sprite("house1", 550, 310, 500, 400, "/sprite_images/house_images/house1.png") // no col
 house2.add_sprite()
 
+const trigger = new Sprite("loc_trigger", 0, 0, 170, 1700, null, null, null, null, null, null, "red",
+    "http://127.0.0.1:3000/maps/blue_ending/village.html")
+trigger.add_sprite()
+trigger.make_transparent()
 
-player.addEventListener("keydown", () => check_collision_player([
+player.addEventListener("keydown", () => {check_collision_player([
     barrier,
     barrier1,
     barrier2,
     barrier3,
-]))
+])
+check_collision_player([trigger], true)}
+)

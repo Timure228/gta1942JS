@@ -1,6 +1,5 @@
 import Sprite from "/sprite.js";
 import Dialog from "/dialog.js";
-import Object from "/object.js";
 import { check_collision_player } from "/sprite.js";
 import TwoOptionChooseWindow from "/choose_window.js";
 import { write_title, scene_transition } from "/cutscene_tools.js";
