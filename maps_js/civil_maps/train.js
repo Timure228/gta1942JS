@@ -1,14 +1,10 @@
 import Sprite from "/sprite.js";
 import Dialog from "/dialog.js";
-import TwoOptionChooseWindow from "/choose_window.js";
-import Object from "/object.js";
-import { check_collision_player } from "/sprite.js";
 import { write_title, scene_transition } from "/cutscene_tools.js";
-
 
 // Ambience Audio
 var city_ambience = new Audio("/maps/ambience_sounds/train.mp3");
-city_ambience.volume = 0.2;
+city_ambience.volume = 0.15;
 city_ambience.loop = true;
 city_ambience.play();
 
@@ -89,7 +85,6 @@ function move_ground() {
             }, 80)
         }, 100)
     })
-    
 }
 move_trees(1)
 move_trees(2)
@@ -116,14 +111,14 @@ const dialog = new Dialog("dialog", [
     ["Where do you call home?", rick_icon_question],
     ["Port Luna.", character_icon],
     ["Ah, been there. Spent some time with a few locals.", rick_icon],
-    ["You know how it is.", rick_icon],
+    ["You know what I mean.", rick_icon],
     ["How many exactly?", character_icon],
     ["Hah, not too many.", rick_icon_laugh],
     ["How long have you been on duty?", character_icon],
     ["A year now.", rick_icon],
     ["Not bad at all.", character_icon],
     ["Yeah… seen a fair share of things.", rick_icon],
-    ["???", character_icon],
+    ["?", character_icon],
     ["Some bad stuff… more than I care to remember.", rick_icon_question],
     ["Anything in particular?", character_icon],
     ["Frosthold has its fair share of trouble. You'll see.", rick_icon],

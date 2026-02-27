@@ -11,7 +11,7 @@ door_open.play();
 
 // Ambience Audio
 var city_ambience = new Audio("/maps/ambience_sounds/city_industrial.mp3");
-city_ambience.volume = 0.4;
+city_ambience.volume = 0.15;
 city_ambience.loop = true;
 city_ambience.play();
 
@@ -41,8 +41,9 @@ const dialog1 = new Dialog("dialog", [
 const dialog2 = new Dialog("dialog", [
     ["Don't lie to me, I know you are.", inspector_icon],
     ["How?", character_icon],
-    ["Mark William, lives alone in this apartment. Floor 4.", inspector_icon],
-    ["... So what do you want?", character_icon],
+    ["Mark William, lives alone on Peterson Street in apartment number 4.", inspector_icon],
+    ["...", character_icon],
+    ["So what do you want?", character_icon],
     ["You are requested to appear in the military registration office today by 4 PM.", inspector_icon],
     ["And what do I do then?", character_icon],
     ["You will recieve all instructions there. Here is your confirmation.", inspector_icon],
@@ -50,7 +51,7 @@ const dialog2 = new Dialog("dialog", [
 
 
 
-const choice1 = new TwoOptionChooseWindow("choose_window", ["Yes", "It's not your business"])
+const choice1 = new TwoOptionChooseWindow("choose_window", ["Yes", "No"])
 
 document.body.addEventListener("keydown", (e) => { 
     if (e.key == "e") {

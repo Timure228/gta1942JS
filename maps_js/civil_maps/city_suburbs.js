@@ -2,16 +2,14 @@ import Sprite from "/sprite.js";
 import Dialog from "/dialog.js";
 import { check_collision_player } from "/sprite.js";
 
-
 let player = document.querySelector(".player_civil")
 player.style.top = 35 + "px"
 player.style.left = 0 + "px"
 player.style.rotate = 0 + "deg"
 
-
 // Ambience Audio
 var city_ambience = new Audio("/maps/ambience_sounds/city_ambience2.mp3");
-city_ambience.volume = 0.45;
+city_ambience.volume = 0.3;
 city_ambience.loop = true;
 city_ambience.play();
 

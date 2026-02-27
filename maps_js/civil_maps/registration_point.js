@@ -6,7 +6,7 @@ import { write_title, scene_transition } from "/cutscene_tools.js";
 
 scene_transition(5300, false)
 
-write_title("Port Luna military registration point 7:00 AM")
+write_title("Port Luna military registration point 15:55 AM")
 
 let player = document.querySelector(".player_civil")
 player.style.top = 300 + "px"
@@ -26,6 +26,7 @@ const barrier4 = new Sprite("skeleton", 200, 100, 1500, 133)
 barrier4.add_sprite()
 barrier1.make_transparent()
 
+let character_icon = "/dialog_faces/player_face_civil.png"
 let inspector_icon = "/dialog_faces/registration_man.png"
 
 const dialog = new Dialog("dialog", [
@@ -33,8 +34,9 @@ const dialog = new Dialog("dialog", [
     ])
 
 const dialog1 = new Dialog("dialog", [
-    ["Your time has come. You will be transported to the Frosthold.", inspector_icon],
+    ["Your time has come. You will be transported to Frosthold City.", inspector_icon],
     ["You are in reserve for now. Your Train lives in 30 minutes...", inspector_icon],
+    ["...", character_icon],
     ["Why are you still standing here? MOVE!!!", inspector_icon],
     ])
 

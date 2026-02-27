@@ -18,6 +18,12 @@ city_ambience.volume = 0.6;
 city_ambience.loop = true;
 city_ambience.play();
 
+// Ambience Audio
+var city_ambience = new Audio("/maps/ambience_sounds/mil_camp_music.mp3");
+city_ambience.volume = 0.4;
+city_ambience.loop = true;
+city_ambience.play();
+
 // class_name, x_left, y_top, width, height, src_, rotation, isanim, n_frames, anim_path, anim_speed, color, trigger_link
 // Wires
 const barbed_wire1 = new Sprite("barbed_wire1", 150, 500, 150, 100, "/sprite_images/barbed_wire.png")
@@ -214,7 +220,7 @@ function show_stat() {
     next_button.style.backgroundColor = "gray";
     next_button.style.color = "white";
     next_button.innerHTML = "→"
-    next_button.onclick = () => window.location.href = "http://127.0.0.1:3000/maps/war_maps/car_to_war.html"
+    next_button.onclick = () => window.location.href = "http://127.0.0.1:3000/maps/war_maps/toilet_clean.html"
 
     let repeat_button = document.createElement("button")
     repeat_button.id = "menu_button"

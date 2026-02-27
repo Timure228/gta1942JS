@@ -4,8 +4,8 @@ import Object from "/object.js";
 import { check_collision_player } from "/sprite.js";
 import { write_title, scene_transition } from "/cutscene_tools.js";
 
-scene_transition(1000)
-write_title("5 Years later. Prison for War Prisoners 12:24 AM")
+scene_transition(7000)
+write_title("5 years later. Prison for War Prisoners 12:24 AM Port Luna")
 
 let player = document.querySelector(".player_civil")
 player.style.top = 550 + "px"
@@ -38,8 +38,8 @@ let character_icon = "/dialog_faces/player_released.png"
 const monolog = new Dialog("monolog", [
     ["...", character_icon],
     ["It is so easy to breath here.", character_icon], 
-    ["I guess I need to get home. It's only 5km from here", character_icon], 
-    ["I don't any money for a bus.", character_icon],
+    ["I guess I need to get home. It's only 5km away from here", character_icon], 
+    ["I don't have any money for a bus.", character_icon],
     ])
 
 document.body.addEventListener("keydown", (e) => { if (e.key == "e") {monolog.start_dialog(e)}})

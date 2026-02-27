@@ -46,7 +46,7 @@ const barrier11 = new Sprite("skeleton", 0, 650, 1500, 150)
 barrier11.add_sprite()
 barrier1.make_transparent()
 
-const door_trigger = new Object("door_trigger", 30, 415, 150, 80, "green")
+const door_trigger = new Object("door_trigger", 0, 415, 150, 80, "green")
 door_trigger.add_object()
 
 player.addEventListener("keydown", () => {check_collision_player([barrier1, 
@@ -63,7 +63,7 @@ player.addEventListener("keydown", () => {check_collision_player([barrier1,
 })    
 
 let character_icon = "/dialog_faces/player_released.png"
-const monolog = new Dialog("monolog", [["So what do I do?.", character_icon]])
+const monolog = new Dialog("monolog", [["So what do I do?", character_icon]])
 
 document.body.addEventListener("keydown", (e) => { if (e.key == "e") {monolog.start_dialog(e)}})
 

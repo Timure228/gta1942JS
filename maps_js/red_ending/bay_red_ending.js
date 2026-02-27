@@ -65,12 +65,7 @@ let character_icon = "/dialog_faces/player_released.png"
 const monolog = new Dialog("monolog", [
     ["Nice view...", character_icon],
     ["...", character_icon], 
-    ["Can't sleep tonight...", character_icon], 
-    ["Maybe insomnia?", character_icon],
-    ["...", character_icon],
-    ["I don't even know...", character_icon],
-    ["This feeling...", character_icon],
-    ["However, I need to get home.", character_icon]
+    ["However, I need to find home.", character_icon]
 ])
 
 player.addEventListener("keydown", () => {check_collision_player([sea_s, grass, bottom_s, barrier1, barrier2])

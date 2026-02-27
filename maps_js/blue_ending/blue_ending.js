@@ -1,17 +1,17 @@
 import Dialog from "/dialog.js";
 import { write_title, write_credits, scene_transition } from "/cutscene_tools.js";
 
-write_title("1 year later.")
+scene_transition(2000)
+write_title("1 year later...")
 
 // Ambience Audio
 var village_ambience = new Audio("/maps/ambience_sounds/Blue_Ending.mp3");
-village_ambience.volume = 0.6;
+village_ambience.volume = 0.3;
 village_ambience.loop = true;
 village_ambience.play();
 
 let character_icon = "/dialog_faces/player_face_village.png"
 let lucy_icon = "/dialog_faces/Lucy/lucy.png"
-let lucy_icon_confused = "/dialog_faces/Lucy/lucy_confused.png"
 let lucy_icon_smile = "/dialog_faces/Lucy/lucy_smiles.png"
 let lucy_icon_flirty = "/dialog_faces/Lucy/lucy_flirty.png"
 
@@ -55,7 +55,6 @@ document.body.addEventListener("keydown", (e) => { if (e.key == "e") {
                     scene_transition(3000, true)
                     setTimeout(() => {window.location.href = "http://127.0.0.1:3000/main_menu/menu.html"}, 7000)
                 })
-                
             }
         }, 15) 
     }}

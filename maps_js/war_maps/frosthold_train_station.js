@@ -3,7 +3,7 @@ import { write_title } from "/cutscene_tools.js";
 
 // Ambience Audio
 var city_ambience = new Audio("/maps/ambience_sounds/windstorm.mp3");
-city_ambience.volume = 0.5;
+city_ambience.volume = 0.45;
 city_ambience.loop = true;
 city_ambience.play();
 

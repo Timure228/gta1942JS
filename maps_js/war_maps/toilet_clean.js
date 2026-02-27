@@ -64,6 +64,6 @@ const interval = setInterval(() => {
     h1_counter.innerHTML = "Particles Left: " +  n_particles;
     if (n_particles == 0) {
         clearInterval(interval)
-        window.location.href = "http://127.0.0.1:3000/maps/war_maps/shooting_range.html"
+        window.location.href = "http://127.0.0.1:3000/maps/war_maps/car_to_war.html"
     }
 }, 100)

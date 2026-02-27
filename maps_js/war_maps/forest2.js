@@ -47,7 +47,7 @@ const dialog = new Dialog("dialog", [
     ["...", soldier_icon], 
     ["[coughs]", soldier_coughs_icon], 
     ["You have to...", soldier_icon], 
-    ["What do I have to do?", character_icon],
+    ["What do I have to?", character_icon],
     ["[coughs]", soldier_coughs_icon],
     ["[coughs]", soldier_coughs_icon],
     ["Shoot me.", soldier_icon],

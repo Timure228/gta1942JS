@@ -14,9 +14,9 @@ city_ambience.volume = 0.6;
 city_ambience.loop = true;
 city_ambience.play();
 
-// Ambience Audio 2
+// Ambience Audio
 var war_ambience = new Audio("/maps/ambience_sounds/distant_battle.mp3");
-war_ambience.volume = 0.2;
+war_ambience.volume = 0.3;
 war_ambience.loop = true;
 war_ambience.play();
 

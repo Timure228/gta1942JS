@@ -27,6 +27,7 @@ const interval = setInterval(() => {
             "Mark finally found a job as builder.",
             "With enough money he could buy himself a car.",
             "He got married and lives in Port Luna.",
+            "He still doesn't know who was talking to him on the radio.",
             "It was one of the thousands of stories.",
             "The End."
         ], () => {

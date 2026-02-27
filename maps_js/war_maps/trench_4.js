@@ -78,7 +78,6 @@ const shit = new Sprite(
 shit.add_sprite()
 shit.play_anim()
 
-
 const rick = new Sprite("rick", 720, 100, 100, 100, "/sprite_images/characters/rick.png") // no col
 rick.add_sprite()
 
@@ -90,6 +89,13 @@ const dialog = new Dialog("dialog", [
     ["It was the last package.", character_icon],
     ["Fuck.", rick_icon],
     ["However man. Can you plea", rick_icon],
+    ["Plea what?", character_icon],
+    ["Please just admit you finished them all yourself?", rick_icon],
+    ["I told you, it was the last package.", character_icon],
+    ["You always say that.", rick_icon],
+    ["Because it's always true.", character_icon],
+    ["Unbelievable.", rick_icon],
+    ["You could try surviving a day without smo-", character_icon]
 ])
 
 const white_screen = new Sprite("white_screen", 0, 0, 2000, 2000, null, 0, 0, 0, 0, 0, "white") // no col

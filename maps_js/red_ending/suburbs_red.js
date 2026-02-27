@@ -22,7 +22,9 @@ const barrier3 = new Sprite("skeleton", 0, 70, 130, 380)
 barrier3.add_sprite()
 const barrier4 = new Sprite("skeleton", 1500, 0, 130, 1280)
 barrier4.add_sprite()
-barrier1.make_transparent()
+const barrier5 = new Sprite("skeleton", 0, -150, 1300, 180)
+barrier5.add_sprite()
+// barrier1.make_transparent()
 
 // Red Flag
 const red_flag = new Sprite("red_flag", 370, -45, 150, 300, "/sprite_images/flags/flag_red/flag_red1.png") // no col
@@ -34,6 +36,6 @@ const trigger = new Sprite("loc_trigger", -150, 0, 170, 1700, null, null, null, 
 trigger.add_sprite()
 trigger.make_transparent()
 
-player.addEventListener("keydown", () => {check_collision_player([barrier1, barrier2, barrier3, barrier4])
+player.addEventListener("keydown", () => {check_collision_player([barrier1, barrier2, barrier3, barrier4, barrier5])
     check_collision_player([trigger], true) // true parameter is for trigger sprites
 })
